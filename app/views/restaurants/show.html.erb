@@ -1,6 +1,7 @@
 <div class="show-main-container">
   <div class="container">
     <div class="card-trip">
+    <% @restaurants.each do |restaurant| %>
     <% if @restaurant.photo.attached? %>
       <%= cl_image_tag @restaurant.photo.key %>
       <div class="card-trip-infos">
@@ -9,15 +10,17 @@
             <p><%= @cow.category %></p>
             <p><%= @cow.rating %></p>
             <p><%= @cow.price %> €</p>
-            <p><%= @cow.telephone %> </p>
+            <p><%= @cow.telephone %></p>
             <p><%= @cow.address %></p>
             <p><%= @cow.adaptability %></p>
             <p><%= @cow.wifi %></p>
+          </div>
+       </div>
       <%else%>
         <h1>No picture</h1>
       <% end %>
-        </div>
-      </div>
+      <% end %>
     </div>
+    <%= link_to 'Home page', roots_path %>
   </div>
 </div>
