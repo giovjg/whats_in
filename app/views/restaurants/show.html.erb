@@ -1,0 +1,23 @@
+<div class="show-main-container">
+  <div class="container">
+    <div class="card-trip">
+    <% if @restaurant.photo.attached? %>
+      <%= cl_image_tag @restaurant.photo.key %>
+      <div class="card-trip-infos">
+        <div>
+            <h2><%= @restaurant.name %></h2>
+            <p><%= @cow.category %></p>
+            <p><%= @cow.rating %></p>
+            <p><%= @cow.price %> €</p>
+            <p><%= @cow.telephone %> </p>
+            <p><%= @cow.address %></p>
+            <p><%= @cow.adaptability %></p>
+            <p><%= @cow.wifi %></p>
+      <%else%>
+        <h1>No picture</h1>
+      <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
