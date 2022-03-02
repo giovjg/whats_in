@@ -1,12 +1,32 @@
 .navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+  //justify-content: space-between;
+  background-color: rgba(29, 28, 28, 0.5);
+  background: linear-gradient(to top, transparent 0%, #11121c 170%);
+ 
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
+  color: lightgrey;
 }
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.stripe-menu{
+  color: lightgrey;
+}
+ .menu-burger{
+   fill: rgb(129, 128, 128);
+ }
+
+ .home-navbar{
+  background-color: hsl(235, 24%, 9%);
+ }
+
+ .logo-container{
+   justify-items: center;
+ }
+
+ 

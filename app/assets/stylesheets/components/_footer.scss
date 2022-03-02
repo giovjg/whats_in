@@ -1,0 +1,24 @@
+.footer {
+    background: linear-gradient(to bottom, transparent 0%, #11121c 130%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 70px;
+    padding: 0px 50px;
+    background-color: hsla(235, 24%, 9%, 0.842);
+  }
+  .footer-links {
+    display: flex;
+    align-items: center;
+  }
+  .footer-links a {
+    color: black;
+    opacity: 0.7;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 0px 10px;
+    color: $orange;
+  }
+  .footer-links a:hover {
+    opacity: 1;
+  }
