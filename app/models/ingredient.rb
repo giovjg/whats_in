@@ -1,4 +1,4 @@
 class Ingredient < ApplicationRecord
-  belongs_to :IngredientCategory
+  belongs_to :ingredient_category
   validates :name, presence: true
 end
