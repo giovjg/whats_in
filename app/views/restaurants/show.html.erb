@@ -1,6 +1,7 @@
 <div class="show-main-container">
   <div class="container">
     <div class="card-trip">
+    <h1>Restaurant</h1>
     <% if @restaurant.photo.attached? %>
       <%= cl_image_tag @restaurant.photo.key %>
       <div class="card-trip-infos">
@@ -25,3 +26,12 @@
     <%= link_to 'Home page', roots_path %>
   </div>
 </div>
+
+    <!--- Here the code for reviews"
+    <h2>Reviews</h2>
+    <ul class="list-group">
+      <% @restaurant.reviews.each do |review| %>
+        <li class="list-group-item"><%= review.content %></li>
+      <% end %>
+    </ul>
+    <%= link_to 'Leave a review', new_restaurant_review_path(@restaurant) %> -->
