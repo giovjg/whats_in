@@ -1,0 +1,37 @@
+<div class="show-main-container">
+  <div class="container">
+    <div class="card-trip">
+    <h1>Restaurant</h1>
+    <% if @restaurant.photo.attached? %>
+      <%= cl_image_tag @restaurant.photo.key %>
+      <div class="card-trip-infos">
+        <div>
+            <span><strong><%= @restaurant.name %></span>
+            <p><%= @restaurant.category %></p>
+            <span><%= restaurant.rating %><!-- <i class="fas fa-star star-yellow"></i>--></span>
+            <p><%= @restaurant.price %> €</p>
+            <p><%= @restaurant.telephone %></p>
+             <p><%= @restaurant.address %></p>
+            <p><%= @restaurant.adaptability %></p>
+            <p><%= @restaurant.wifi %></p>
+            <p><%= @restaurant.start_time %></p> - <p><%= @restaurant.end_time  %></p>
+          </div>
+       </div>
+      <%else%>
+        <h1>No picture</h1>
+      <% end %>
+     <!--  Here the code for dishes list for a given restaurant-->
+      <% end %>
+    </div>
+    <%= link_to 'Home page', roots_path %>
+  </div>
+</div>
+
+    <!--- Here the code for reviews"
+    <h2>Reviews</h2>
+    <ul class="list-group">
+      <% @restaurant.reviews.each do |review| %>
+        <li class="list-group-item"><%= review.content %></li>
+      <% end %>
+    </ul>
+    <%= link_to 'Leave a review', new_restaurant_review_path(@restaurant) %> -->
