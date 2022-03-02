@@ -3,7 +3,7 @@
   <%= f.submit "Search", class: "btn btn-primary" %>
 <% end %>
 
- <% if @restaurants%>
+ <% if @restaurants %>
   <% @restaurants.each do |restaurant| %>
      <%= restaurant.name %>
     <% end %>
