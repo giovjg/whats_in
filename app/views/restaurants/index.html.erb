@@ -1,0 +1,10 @@
+<%= simple_form_for :search, url: "/restaurants", method: "GET" do |f| %>
+  <%= f.input :ingredients, label: "restaurant",  collection: Ingredient.all, as: :check_boxes, include_hidden:false, include_blank: false%>
+  <%= f.submit "Search", class: "btn btn-primary" %>
+<% end %>
+
+ <% if @restaurants%>
+  <% @restaurants.each do |restaurant| %>
+     <%= restaurant.name %>
+    <% end %>
+<% end %>
