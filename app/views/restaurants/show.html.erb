@@ -6,14 +6,15 @@
       <%= cl_image_tag @restaurant.photo.key %>
       <div class="card-trip-infos">
         <div>
-            <h2><%= @restaurant.name %></h2>
-            <p><%= @cow.category %></p>
-            <p><%= @cow.rating %></p>
-            <p><%= @cow.price %> €</p>
-            <p><%= @cow.telephone %></p>
-            <p><%= @cow.address %></p>
-            <p><%= @cow.adaptability %></p>
-            <p><%= @cow.wifi %></p>
+            <span><strong><%= @restaurant.name %></span>
+            <p><%= @restaurant.category %></p>
+            <span><%= restaurant.rating %>   <!-- <i class="fas fa-star star-yellow"></i></span>-->
+            <p><%= @restaurant.price %> €</p>
+            <p><%= @restaurant.telephone %></p>
+  <!--      <p><%= @restaurant.address %></p>-->
+            <p><%= @restaurant.adaptability %></p>
+            <p><%= @restaurant.wifi %></p>
+            <p><%= @restaurant.start_time %></p> - <p><%= @restaurant.end_time  %></p>
           </div>
        </div>
       <%else%>
