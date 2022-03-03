@@ -13,6 +13,15 @@ class RestaurantsController < ApplicationController
     else
       @restaurants = Restaurant.all
     end
+
+    # Adding Map
+    @restaurants = Restaurant.all
+    @markers = @restaurants.geocoded.map do |restaurant|
+      {
+        lat: restaurant.latitude,
+        lng: restaurant.longitude
+      }
+    end
   end
 
   # GET /restaurant/1
