@@ -3,12 +3,10 @@
   <%= f.submit "Search", class: "btn btn-primary" %>
 <% end %>
 
- <% if @restaurants %>
- <!--<<% if @restaurant.photo.attached? %>-->
- <!--<% @restaurants.photos.each do |photo| %>-->
   <% @restaurants.each do |restaurant| %>
      <%= restaurant.name %>
-     <!--<%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %> -->
+     <!--<% if @restaurant.photo.attached? %> -->
+      <!-- <%= cl_image_tag @restaurant.photo.key, height: 300, width: 400, crop: :fill %>-->
     <% end %>
 <% end %>
 
