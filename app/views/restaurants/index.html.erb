@@ -5,8 +5,7 @@
 
  <% if @restaurants %>
   <% @restaurants.each do |restaurant| %>
-     <%= restaurant.name %>
-      <%= restaurant.name %>
+      <%= link_to restaurant.name, restaurant_path(restaurant, search: {ingredients: @ingredients_query})  %>
     <% end %>
 <% end %>
 
