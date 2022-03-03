@@ -28,10 +28,13 @@ class RestaurantsController < ApplicationController
   end
 
   def show
-    @dishes = @restaurant.dishes.joins(
-      :dish_ingredients
-    ).where.not("dish_ingredients.ingredient_id IN (?)", ingredient_params[:ingredients])
-    raise
+    if params.key?(:ingredients)
+      @dishes = @restaurant.dishes.joins(
+        :dish_ingredients
+      ).where.not("dish_ingredients.ingredient_id IN (?)", ingredient_params[:ingredients])
+    else
+      @dishes = @restaurant.dishes.all
+    end
   end
 
   private

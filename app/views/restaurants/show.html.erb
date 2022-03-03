@@ -15,23 +15,26 @@
             <p><%= @restaurant.adaptability %></p>
             <p><%= @restaurant.wifi %></p>
             <p><%= @restaurant.start_time %></p> - <p><%= @restaurant.end_time  %></p>
-            <p><%= @dish.name %></p>
+            <p><%= @restaurant.dishes.name %></p>
           </div>
        </div>
       <%else%>
         <h1>No picture</h1>
       <% end %>
      <!--  Here the code for dishes list for a given restaurant-->
+     <% @dishes.each do |dish| %>
+      <p><%= dish.name%></p>
+    <% end %>
     </div>
     <%= link_to 'Home page', "/ " %>
   </div>
 </div>
 
-    <!--- Here the code for reviews"
-    <h2>Reviews</h2>
-    <ul class="list-group">
-      <% @restaurant.reviews.each do |review| %>
-        <li class="list-group-item"><%= review.content %></li>
-      <% end %>
-    </ul>
-    <%= link_to 'Leave a review', new_restaurant_review_path(@restaurant) %> -->
+    <%# <!--- Here the code for reviews"
+    <%# <h2>Reviews</h2> %>
+    <%# <ul class="list-group"> %>
+      <%# <% @restaurant.reviews.each do |review| %>
+        <%# <li class="list-group-item"><%= review.content %>
+      <%# <% end %>
+    <%# </ul> %>
+    <%# <%= link_to 'Leave a review', new_restaurant_review_path(@restaurant) %>
