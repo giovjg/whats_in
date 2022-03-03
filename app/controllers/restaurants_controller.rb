@@ -10,7 +10,8 @@ class RestaurantsController < ApplicationController
       @markers = @restaurants.geocoded.map do |restaurant|
         {
           lat: restaurant.latitude,
-          lng: restaurant.longitude
+          lng: restaurant.longitude,
+          info_window: render_to_string(partial: "info_window", locals: { restaurant: restaurant })
         }
       end
       # SELECT DISTINCT * restaurants JOINS dishes on dishes.restaurant_id = restaurants.id
@@ -20,7 +21,8 @@ class RestaurantsController < ApplicationController
       @markers = @restaurants.geocoded.map do |restaurant|
         {
           lat: restaurant.latitude,
-          lng: restaurant.longitude
+          lng: restaurant.longitude,
+          info_window: render_to_string(partial: "info_window", locals: { restaurant: restaurant })
         }
       end
     end
