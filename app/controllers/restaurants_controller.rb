@@ -12,7 +12,8 @@ class RestaurantsController < ApplicationController
         {
           lat: restaurant.latitude,
           lng: restaurant.longitude,
-          info_window: render_to_string(partial: "info_window", locals: { restaurant: restaurant })
+          info_window: render_to_string(partial: "info_window", locals: { restaurant: restaurant }),
+          image_url: helpers.asset_url("cloudinary://817351874799989:jsbX6mdPIu7YdvgoX__wUdJ0Htw@ddamh5wea")
         }
       end
       # SELECT DISTINCT * restaurants JOINS dishes on dishes.restaurant_id = restaurants.id
@@ -23,20 +24,20 @@ class RestaurantsController < ApplicationController
         {
           lat: restaurant.latitude,
           lng: restaurant.longitude,
-          info_window: render_to_string(partial: "info_window", locals: { restaurant: restaurant })
+          info_window: render_to_string(partial: "info_window", locals: { restaurant: restaurant }),
+          image_url: helpers.asset_url("cloudinary://817351874799989:jsbX6mdPIu7YdvgoX__wUdJ0Htw@ddamh5wea")
         }
       end
     end
   end
 
   def show
-
-    if params.key?(:ingredients)
+    if params[:search].present?
       @dishes = @restaurant.dishes.joins(
         :dish_ingredients
       ).where.not("dish_ingredients.ingredient_id IN (?)", ingredient_params[:ingredients])
     else
-      @dishes = @restaurant.dishes.all
+      @dishes = @restaurant.dishes.includes(dish_ingredients: :ingredients)
     end
   end
 
