@@ -5,8 +5,12 @@
   <%= f.submit "Search", class: "btn" %>
 <% end %>
 
- <% if @restaurants %>
   <% @restaurants.each do |restaurant| %>
+
+     <%= restaurant.name %>
+     <!--<% if restaurant.photo %> -->
+      <!-- <%= cl_image_tag @restaurant.photo.key, height: 300, width: 400, crop: :fill %>-->
+
 
   <div class="card-trip">
   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
@@ -20,6 +24,7 @@
     
   </div>
 </div>
+
 
     <% end %>
 <% end %>
