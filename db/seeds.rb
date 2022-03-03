@@ -3,11 +3,14 @@
 #
 # Examples:
 #
-#   movies = Movie.create( name: 'Star Wars' ,  name: 'Lord of the Rings' 
+#   movies = Movie.create( name: 'Star Wars' ,  name: 'Lord of the Rings'
 
 #   Character.create(name: 'Luke', movie: movies.first
 
 require 'open-uri'
+
+Restaurant.destroy_all
+User.destroy_all
 
 puts "starting the seeds"
 
@@ -73,7 +76,7 @@ ugarit = Restaurant.create!(
     name: 'Ugarit',
     category: 'Syrian',
     address: 'Carrer de Bruniquer, 69, 08024 Barcelona',
-    telephone: '645181011', 
+    telephone: '645181011',
     rating: 2.5,
     price: '££',
     start_time: 1,
@@ -87,16 +90,16 @@ hummus = Dish.create!(name:'Hummus' ,restaurant_id: ugarit.id)
 tabouleh = Dish.create!(name:'Tabouleh' ,restaurant_id: ugarit.id)
 
 almacen = Restaurant.create!(
-    name: 'El viejo Almacen', 
-    category: 'argentinian', 
+    name: 'El viejo Almacen',
+    category: 'argentinian',
     address: 'Carrer de Ramón y Cajal, 158, 08024 Barcelona',
-    telephone: '645181012', 
+    telephone: '645181012',
     rating: 1.5,
     price: '£' ,
     wifi: true ,
     start_time: 1,
     end_time: 11,
- 
+
 )
 
 empanadaDeCarne = Dish.create!(name:'Empanada de carne' ,restaurant_id: almacen.id)
@@ -108,7 +111,7 @@ tierra = Restaurant.create!(
     name: 'Tierra' ,
     category: 'mexican' ,
     address: "Carrer D'avila, 171, 08018 Barcelona" ,
-    telephone: '645181013' , 
+    telephone: '645181013' ,
     rating: 3.5,
     price: '£' ,
     wifi: true ,
@@ -126,7 +129,7 @@ dolce = Restaurant.create!(
     name: 'Dolce pizza ' ,
     category: 'pizza' ,
     address: 'Carrer d Hipòlit Lázaro, 34, 08025 Barcelona' ,
-    telephone: '645181014' , 
+    telephone: '645181014' ,
     rating: 4.5,
     price: '££' ,
     wifi: true ,
@@ -139,15 +142,15 @@ diavola = Dish.create!(name:'Diavola' ,restaurant_id: dolce.id)
 cuattroStagioni = Dish.create!(name:'Cuattro stagioni' ,restaurant_id: dolce.id)
 cuattroFormaggi = Dish.create!(name:'Cuattro formaggi' ,restaurant_id: dolce.id)
 
-world = Restaurant.create!( 
+world = Restaurant.create!(
     name: 'Veg World India' ,
     category: 'indian' ,
     address: 'Carrer de Bruniquer, 24, 08012 Barcelona' ,
-    telephone: '645181015' , 
+    telephone: '645181015' ,
     rating: 5.0,
     price: '£££' ,
     start_time: 1,
-    end_time: 11 
+    end_time: 11
 )
 
 dhal = Dish.create!(name:'Dhal' ,restaurant_id: world.id)
@@ -155,16 +158,16 @@ tikkaMasala = Dish.create!(name:'Tikka Masala' ,restaurant_id: world.id)
 pakoras = Dish.create!(name:'Pakoras' ,restaurant_id: world.id)
 korma = Dish.create!(name:'Korma' ,restaurant_id: world.id)
 
-koby = Restaurant.create!( 
+koby = Restaurant.create!(
     name: 'Koby Burgers' ,
     category: 'burger' ,
     address: 'Carrer de Marià Cubí, 92, 08021 Barcelona' ,
-    telephone: '645181016' , 
+    telephone: '645181016' ,
     rating: 1.5,
     price: '££' ,
     start_time: 1,
     end_time: 11,
-    adaptability: true 
+    adaptability: true
 )
 
 hamburger = Dish.create!(name:'Hamburger' ,restaurant_id: koby.id)
@@ -172,11 +175,11 @@ cheeseburger = Dish.create!(name:'Cheeseburger' ,restaurant_id: koby.id)
 veggiburger = Dish.create!(name:'Veggiburger' ,restaurant_id: koby.id)
 chickenburger = Dish.create!(name:'Chickenburger' ,restaurant_id: koby.id)
 
-tomodachi = Restaurant.create!( 
+tomodachi = Restaurant.create!(
     name: 'Tomodachi' ,
     category: 'sushi' ,
     address: ' Travessera de Gràcia, 250, 08025 Barcelona' ,
-    telephone: '645181017' , 
+    telephone: '645181017' ,
     rating: 5.0,
     price: '£££' ,
     start_time: 1,
@@ -191,8 +194,8 @@ temaki = Dish.create!(name:'Temaki' ,restaurant_id: tomodachi.id)
 piadina = Restaurant.create!(
     name: 'La Piadina' ,
     category: 'italian' ,
-    address: 'Carrer de la Santa Creu, 1, 08024 Barcelona' , 
-    telephone: '645181018' , 
+    address: 'Carrer de la Santa Creu, 1, 08024 Barcelona' ,
+    telephone: '645181018' ,
     rating: 4.5,
     price: '£££' ,
     wifi: true,
@@ -204,12 +207,12 @@ piadina = Restaurant.create!(
  spagettiAlPesto = Dish.create!(name:'Spagetti al pesto' ,restaurant_id: piadina.id)
  carbonara = Dish.create!(name:'Carbonara' ,restaurant_id: piadina.id)
  pastaNorma = Dish.create!(name:'Pasta Norma' ,restaurant_id: piadina.id)
- 
+
  yoma = Restaurant.create!(
     name: 'Yoma' ,
     category: 'chinese' ,
-    address: 'Travessera de Gràcia, 281, 08025 Barcelona' , 
-    telephone: '645181019' , 
+    address: 'Travessera de Gràcia, 281, 08025 Barcelona' ,
+    telephone: '645181019' ,
     rating: 3.5,
     price: '£££' ,
     wifi: true,
@@ -225,8 +228,8 @@ piadina = Restaurant.create!(
  shannin = Restaurant.create!(
     name: 'Sannin' ,
     category: 'libanise' ,
-    address: "Carrer de l'Encarnació, 44, 08024 Barcelona" , 
-    telephone: '645181020' , 
+    address: "Carrer de l'Encarnació, 44, 08024 Barcelona" ,
+    telephone: '645181020' ,
     rating: 3.5,
     price: '£££' ,
     wifi: false,
@@ -259,7 +262,7 @@ piadina = Restaurant.create!(
  car = DishIngredient.create!(dish_id: tacoCarnitas.id ,ingredient_id: beef.id)
  tveg = DishIngredient.create!(dish_id: tacoVeg.id ,ingredient_id: avocado.id)
  mush = DishIngredient.create!(dish_id: tacoMushroom.id ,ingredient_id: mushrooms.id)
- 
+
  #dolce
 pas = DishIngredient.create!(dish_id: margarita.id ,ingredient_id: cheese.id)
 car = DishIngredient.create!(dish_id: diavola.id ,ingredient_id: pork.id)
@@ -335,12 +338,3 @@ keb = DishIngredient.create!(dish_id: kebe.id ,ingredient_id: duck.id)
 
 puts "#{DishIngredient.all.count} categories created"
 puts "seeds are done!"
-
-
-
-
-
-
- 
-
-
