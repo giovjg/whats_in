@@ -71,6 +71,9 @@ duck = Ingredient.create!(name: "duck", ingredient_category_id: meat.id)
 
 puts "#{Ingredient.all.count} categories created"
 
+
+file =
+URI.open('https://www.restaurantesirio.es/sites/default/files/joanic2.jpg')
 ugarit = Restaurant.create!(
     name: 'Ugarit',
     category: 'Syrian',
@@ -82,12 +85,15 @@ ugarit = Restaurant.create!(
     end_time: 11,
     adaptability: true
 )
+restaurant.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
 shawarma = Dish.create!(name:'Shawarma' ,restaurant_id: ugarit.id)
 kebab = Dish.create!(name:'Kebab' ,restaurant_id: ugarit.id)
 hummus = Dish.create!(name:'Hummus' ,restaurant_id: ugarit.id)
 tabouleh = Dish.create!(name:'Tabouleh' ,restaurant_id: ugarit.id)
 
+file =
+URI.open('https://live.staticflickr.com/3854/15100148110_46631f9dd3.jpg')
 almacen = Restaurant.create!(
     name: 'El viejo Almacen',
     category: 'argentinian',
@@ -100,12 +106,15 @@ almacen = Restaurant.create!(
     end_time: 11,
 
 )
+restaurant.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
 empanadaDeCarne = Dish.create!(name:'Empanada de carne' ,restaurant_id: almacen.id)
 empanadaVegetal = Dish.create!(name:'Empanada vegetal' ,restaurant_id: almacen.id)
 empanadaJamonYQueso = Dish.create!(name:'Empanada jamon y queso' ,restaurant_id: almacen.id)
 empandaDePollo = Dish.create!(name:'Empanda de pollo' ,restaurant_id: almacen.id)
 
+file =
+URI.open("https://www.tierraburritos.com/wp-content/uploads/Glories12-1024x633.jpg")
 tierra = Restaurant.create!(
     name: 'Tierra' ,
     category: 'mexican' ,
@@ -118,29 +127,38 @@ tierra = Restaurant.create!(
     end_time: 12,
     adaptability: true
 )
+restaurant.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
 tacoAlPastor = Dish.create!(name:'Taco al pastor' ,restaurant_id: tierra.id)
 tacoCarnitas = Dish.create!(name:'Taco carnitas' ,restaurant_id: tierra.id)
 tacoVeg = Dish.create!(name:'Taco veg' ,restaurant_id: tierra.id)
 tacoMushroom = Dish.create!(name:'Taco mushrooms' ,restaurant_id: tierra.id)
 
+
+file =
+URI.open('https://img-4.linternaute.com/JDZXM0xn44XwKwk5j6JAJ7H8SPA=/540x540/b1cccf7af83a4232985e62c8546037cd/restaurant/125234.jpg')
 dolce = Restaurant.create!(
     name: 'Dolce pizza ' ,
     category: 'pizza' ,
     address: 'Carrer d Hipòlit Lázaro, 34, 08025 Barcelona' ,
     telephone: '645181014' ,
     rating: 4.5,
-    price: '££' ,
+    price: '££',
     wifi: true ,
     start_time: 1,
     end_time: 11
 )
+restaurant.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+
 
 margarita = Dish.create!(name:'Margarita' ,restaurant_id: dolce.id)
 diavola = Dish.create!(name:'Diavola' ,restaurant_id: dolce.id)
 cuattroStagioni = Dish.create!(name:'Cuattro stagioni' ,restaurant_id: dolce.id)
 cuattroFormaggi = Dish.create!(name:'Cuattro formaggi' ,restaurant_id: dolce.id)
 
+
+file =
+URI.open('https://media-cdn.tripadvisor.com/media/photo-s/12/e8/c7/85/photo0jpg.jpg')
 world = Restaurant.create!(
     name: 'Veg World India' ,
     category: 'indian' ,
@@ -151,12 +169,15 @@ world = Restaurant.create!(
     start_time: 1,
     end_time: 11
 )
+restaurant.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
 dhal = Dish.create!(name:'Dhal' ,restaurant_id: world.id)
 tikkaMasala = Dish.create!(name:'Tikka Masala' ,restaurant_id: world.id)
 pakoras = Dish.create!(name:'Pakoras' ,restaurant_id: world.id)
 korma = Dish.create!(name:'Korma' ,restaurant_id: world.id)
 
+file =
+URI.open('https://www.sillasmesas.es/blog/wp-content/uploads/2019/10/Decoracion-restaurantes-japoneses.jpg')
 koby = Restaurant.create!(
     name: 'Koby Burgers' ,
     category: 'burger' ,
@@ -168,12 +189,16 @@ koby = Restaurant.create!(
     end_time: 11,
     adaptability: true
 )
+restaurant.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+
 
 hamburger = Dish.create!(name:'Hamburger' ,restaurant_id: koby.id)
 cheeseburger = Dish.create!(name:'Cheeseburger' ,restaurant_id: koby.id)
 veggiburger = Dish.create!(name:'Veggiburger' ,restaurant_id: koby.id)
 chickenburger = Dish.create!(name:'Chickenburger' ,restaurant_id: koby.id)
 
+file =
+URI.open('https://photos1.blogger.com/blogger/4059/426/320/DSC05029%200608.jpg')
 tomodachi = Restaurant.create!(
     name: 'Tomodachi' ,
     category: 'sushi' ,
@@ -184,29 +209,35 @@ tomodachi = Restaurant.create!(
     start_time: 1,
     end_time: 12
 )
+restaurant.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
 nigriri = Dish.create!(name:'Nigriri' ,restaurant_id: tomodachi.id)
 maki = Dish.create!(name:'Maki' ,restaurant_id: tomodachi.id)
 uramaki = Dish.create!(name:'Uramaki' ,restaurant_id: tomodachi.id)
 temaki = Dish.create!(name:'Temaki' ,restaurant_id: tomodachi.id)
 
+file =
+URI.open('https://i.pinimg.com/originals/c0/8a/df/c08adfa5c6256661772afefe72d7301f.jpg')
 piadina = Restaurant.create!(
-    name: 'La Piadina' ,
-    category: 'italian' ,
-    address: 'Carrer de la Santa Creu, 1, 08024 Barcelona' ,
-    telephone: '645181018' ,
+    name: 'La Piadina',
+    category: 'italian',
+    address: 'Carrer de la Santa Creu, 1, 08024 Barcelona',
+    telephone: '645181018',
     rating: 4.5,
-    price: '£££' ,
+    price: '£££',
     wifi: true,
     start_time: 1,
     end_time: 12
  )
+ restaurant.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
  vongole = Dish.create!(name:'Vongole' ,restaurant_id: piadina.id)
  spagettiAlPesto = Dish.create!(name:'Spagetti al pesto' ,restaurant_id: piadina.id)
  carbonara = Dish.create!(name:'Carbonara' ,restaurant_id: piadina.id)
  pastaNorma = Dish.create!(name:'Pasta Norma' ,restaurant_id: piadina.id)
 
+ file =
+ URI.open(' https://s.yimg.com/ny/api/res/1.2/B1SQExPcsLSW3dK65c8Ngw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTcwNTtoPTM5MS42NjY2NjY2NjY2NjY3/https://s.yimg.com/uu/api/res/1.2/EC8OkoDODxlfvcTQCsKIJw--~B/aD00MDA7dz03MjA7c209MTthcHBpZD15dGFjaHlvbg--/http://media.zenfs.com/en-SG/homerun/the_edge_961/a9ca705aa6836f99926c9ef737cf720d')
  yoma = Restaurant.create!(
     name: 'Yoma' ,
     category: 'chinese' ,
@@ -218,13 +249,16 @@ piadina = Restaurant.create!(
     start_time: 1,
     end_time: 11
  )
+ restaurant.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
  kungPaoChicken = Dish.create!(name:'Kung Pao Chicken' ,restaurant_id: yoma.id)
  dumplings = Dish.create!(name:'Dumplings' ,restaurant_id: yoma.id)
  cantoneseDimSum = Dish.create!(name:'Cantonese Dim Sum' ,restaurant_id: yoma.id)
  sweetAndSourPork = Dish.create!(name:'Sweet and Sour Pork' ,restaurant_id: yoma.id)
 
- shannin = Restaurant.create!(
+file =
+URI.open('https://barcelonahacks.com/wp-content/uploads/sites/5/2017/01/kebab-barcelona.jpg')
+sannin = Restaurant.create!(
     name: 'Sannin' ,
     category: 'libanise' ,
     address: "Carrer de l'Encarnació, 44, 08024 Barcelona" ,
@@ -235,6 +269,8 @@ piadina = Restaurant.create!(
     start_time: 1,
     end_time: 11
  )
+ restaurant.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+
 
  cousCousVegetal = Dish.create!(name:'Cous-Cous Vegetal' ,restaurant_id: shannin.id)
  kafta = Dish.create!(name:'Kafta' ,restaurant_id: shannin.id)
