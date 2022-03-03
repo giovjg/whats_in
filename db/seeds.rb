@@ -12,9 +12,7 @@ DishIngredient.destroy_all
 Dish.destroy_all
 Restaurant.destroy_all
 User.destroy_all
-
-Restaurant.destroy_all
-User.destroy_all
+Ingredient.destroy_all
 
 puts "starting the seeds"
 
@@ -382,4 +380,3 @@ keb = DishIngredient.create!(dish_id: kebe.id ,ingredient_id: duck.id)
 puts "#{DishIngredient.all.count} categories created"
 
 puts "seeds are done!"
-
