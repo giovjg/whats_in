@@ -13,7 +13,7 @@ class RestaurantsController < ApplicationController
           lat: restaurant.latitude,
           lng: restaurant.longitude,
           info_window: render_to_string(partial: "info_window", locals: { restaurant: restaurant }),
-          image_url: helpers.asset_url("cloudinary://817351874799989:jsbX6mdPIu7YdvgoX__wUdJ0Htw@ddamh5wea")
+          #image_url: helpers.asset_url("cloudinary://817351874799989:jsbX6mdPIu7YdvgoX__wUdJ0Htw@ddamh5wea")
         }
       end
       # SELECT DISTINCT * restaurants JOINS dishes on dishes.restaurant_id = restaurants.id
@@ -25,7 +25,7 @@ class RestaurantsController < ApplicationController
           lat: restaurant.latitude,
           lng: restaurant.longitude,
           info_window: render_to_string(partial: "info_window", locals: { restaurant: restaurant }),
-          image_url: helpers.asset_url("cloudinary://817351874799989:jsbX6mdPIu7YdvgoX__wUdJ0Htw@ddamh5wea")
+          #image_url: helpers.asset_url("cloudinary://817351874799989:jsbX6mdPIu7YdvgoX__wUdJ0Htw@ddamh5wea")
         }
       end
     end
