@@ -3,28 +3,41 @@ class RestaurantsController < ApplicationController
 
   def index
     if params[:search].present?
+      @ingredients_query = ingredient_params[:ingredients]
       @dishes = Dish.joins(
         :dish_ingredients
       ).where.not("dish_ingredients.ingredient_id IN (?)", ingredient_params[:ingredients])
       @restaurants = Restaurant.joins(:dishes).where(dishes: { id: @dishes.pluck(:id) }).distinct
-      raise
+      @markers = @restaurants.geocoded.map do |restaurant|
+        {
+          lat: restaurant.latitude,
+          lng: restaurant.longitude,
+          info_window: render_to_string(partial: "info_window", locals: { restaurant: restaurant })
+        }
+      end
       # SELECT DISTINCT * restaurants JOINS dishes on dishes.restaurant_id = restaurants.id
       # WHERE dishes.id IN (1, 3, 4, 5)
     else
       @restaurants = Restaurant.all
-    end
-
-    # Adding Map
-    @restaurants = Restaurant.all
-    @markers = @restaurants.geocoded.map do |restaurant|
-      {
-        lat: restaurant.latitude,
-        lng: restaurant.longitude
-      }
+      @markers = @restaurants.geocoded.map do |restaurant|
+        {
+          lat: restaurant.latitude,
+          lng: restaurant.longitude,
+          info_window: render_to_string(partial: "info_window", locals: { restaurant: restaurant })
+        }
+      end
     end
   end
 
   def show
+
+    if params.key?(:ingredients)
+      @dishes = @restaurant.dishes.joins(
+        :dish_ingredients
+      ).where.not("dish_ingredients.ingredient_id IN (?)", ingredient_params[:ingredients])
+    else
+      @dishes = @restaurant.dishes.all
+    end
   end
 
   private

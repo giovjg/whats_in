@@ -13,14 +13,17 @@ Dish.destroy_all
 Restaurant.destroy_all
 User.destroy_all
 
+Restaurant.destroy_all
+User.destroy_all
+
 puts "starting the seeds"
 
  user_client = User.create!(email: "user_client@gmail.com", password: "password")
  user_owner = User.create!(email: "user_owner@gmail.com", password: "password")
- owner_photo = URI.open('https://media-exp1.licdn.com/dms/image/C4D03AQELp7bJRzb9Aw/profile-displayphoto-shrink_200_200/0/1611674841725?e=1651104000&v=beta&t=rhXKn8wnhj7mDq1uBHHq0q-8uGMDM2DVxCarb3IaCYg')
- client_photo = URI.open('https://media-exp1.licdn.com/dms/image/C4D03AQE2dyWfAre7_A/profile-displayphoto-shrink_200_200/0/1641368252586?e=1651104000&v=beta&t=jlWiL6-iZr0roYIQIWWqsPniYPMn623Sgg4kVMKzgts')
- user_client.photo.attach(io: client_photo, filename: user_client.email, content_type: 'image/jpeg')
- user_owner.photo.attach(io: owner_photo, filename: user_owner.email, content_type: 'image/jpeg')
+ #owner_photo = URI.open('https://media-exp1.licdn.com/dms/image/C4D03AQELp7bJRzb9Aw/profile-displayphoto-shrink_200_200/0/1611674841725?e=1651104000&v=beta&t=rhXKn8wnhj7mDq1uBHHq0q-8uGMDM2DVxCarb3IaCYg')
+ #client_photo = URI.open('https://media-exp1.licdn.com/dms/image/C4D03AQE2dyWfAre7_A/profile-displayphoto-shrink_200_200/0/1641368252586?e=1651104000&v=beta&t=jlWiL6-iZr0roYIQIWWqsPniYPMn623Sgg4kVMKzgts')
+ #user_client.photo.attach(io: client_photo, filename: user_client.email, content_type: 'image/jpeg')
+ #user_owner.photo.attach(io: owner_photo, filename: user_owner.email, content_type: 'image/jpeg')
 
 fruits = IngredientCategory.create!(name: 'Fruits')
 gluten = IngredientCategory.create!(name: 'gluten')
@@ -159,6 +162,7 @@ cuattroStagioni = Dish.create!(name:'Cuattro stagioni' ,restaurant_id: dolce.id)
 cuattroFormaggi = Dish.create!(name:'Cuattro formaggi' ,restaurant_id: dolce.id)
 
 
+
 file =
 URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/v1646320995/274069923_468598974730254_2982254997917976405_n_pcvnx6.jpg')
 world = Restaurant.create!(
@@ -199,6 +203,7 @@ cheeseburger = Dish.create!(name:'Cheeseburger' ,restaurant_id: koby.id)
 veggiburger = Dish.create!(name:'Veggiburger' ,restaurant_id: koby.id)
 chickenburger = Dish.create!(name:'Chickenburger' ,restaurant_id: koby.id)
 
+
 file =
 URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/v1646319972/tomodashi_restaurant_ucv1q5.jpg')
 tomodachi = Restaurant.create!(
@@ -237,6 +242,7 @@ piadina = Restaurant.create!(
  spagettiAlPesto = Dish.create!(name:'Spagetti al pesto' ,restaurant_id: piadina.id)
  carbonara = Dish.create!(name:'Carbonara' ,restaurant_id: piadina.id)
  pastaNorma = Dish.create!(name:'Pasta Norma' ,restaurant_id: piadina.id)
+
 
  file =
  URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/v1646320000/yoma_restaurant_kgnw62.jpg')
@@ -374,4 +380,6 @@ keb = DishIngredient.create!(dish_id: kebe.id ,ingredient_id: duck.id)
 # kebe = Dish.create!(name:'Kebe' ,restaurant_id: shannin.id)
 
 puts "#{DishIngredient.all.count} categories created"
-puts "seeds are done!!!"
+
+puts "seeds are done!"
+

@@ -1,12 +1,31 @@
 <%= simple_form_for :search, url: "/restaurants", method: "GET" do |f| %>
-  <%= f.input :ingredients, label: "restaurant",  collection: Ingredient.all, as: :check_boxes, include_hidden:false, include_blank: false%>
-  <%= f.submit "Search", class: "btn btn-primary" %>
+  <%= f.input :ingredients, label: false, collection: Ingredient.all, as: :check_boxes, 
+              include_hidden:false, include_blank: false, input_html: { class: "tag-selector" },
+              item_wrapper_class: 'tag-item' %>
+  <%= f.submit "Search", class: "btn" %>
 <% end %>
 
   <% @restaurants.each do |restaurant| %>
+
      <%= restaurant.name %>
      <!--<% if restaurant.photo %> -->
       <!-- <%= cl_image_tag @restaurant.photo.key, height: 300, width: 400, crop: :fill %>-->
+
+
+  <div class="card-trip">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+  <div class="card-trip-infos">
+    <div>
+      <h2><%= link_to restaurant.name, restaurant_path(restaurant, search: {ingredients: @ingredients_query}), class:"rest-name-card" %></h2>
+      <p><%= restaurant.category %></p>
+    </div>
+
+    <h2 class="card-trip-pricing"><i class="fas fa-star star"></i><%= restaurant.rating %></h2>
+    
+  </div>
+</div>
+
+
     <% end %>
 <% end %>
 
