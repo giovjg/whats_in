@@ -15,7 +15,7 @@
   <body>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-    <div class=" <%="main-container" if current_page?(root_path)%>"">
+    <div class=" min <%="main-container" if current_page?(root_path)%>">
     <%= yield %>
     </div>
     <%= render 'shared/footer' %>
