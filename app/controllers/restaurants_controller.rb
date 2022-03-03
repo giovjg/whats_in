@@ -3,6 +3,7 @@ class RestaurantsController < ApplicationController
 
   def index
     if params[:search].present?
+      @ingredients_query = ingredient_params[:ingredients]
       @dishes = Dish.joins(
         :dish_ingredients
       ).where.not("dish_ingredients.ingredient_id IN (?)", ingredient_params[:ingredients])
@@ -27,6 +28,10 @@ class RestaurantsController < ApplicationController
   end
 
   def show
+    @dishes = @restaurant.dishes.joins(
+      :dish_ingredients
+    ).where.not("dish_ingredients.ingredient_id IN (?)", ingredient_params[:ingredients])
+    raise
   end
 
   private
