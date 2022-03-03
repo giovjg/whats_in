@@ -32,6 +32,7 @@ class RestaurantsController < ApplicationController
   end
 
   def show
+
     if params.key?(:ingredients)
       @dishes = @restaurant.dishes.joins(
         :dish_ingredients
