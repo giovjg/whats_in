@@ -1,13 +1,14 @@
 <div class="show-main-container">
   <div class="container">
     <div class="card-trip">
-    <h1>Restaurant</h1>
+
+   
+    <h1><%= @restaurant.name %></h1>
 
     <% if @restaurant.photo.attached? %>
       <%= cl_image_tag @restaurant.photo.key, height: 300, width: 400, crop: :fill %>
       <div class="card-trip-infos">
         <div>
-            <span><strong><%= @restaurant.name %></span>
             <p><%= @restaurant.category %></p>
            <p><%= @restaurant.rating %></p>
             <p><%= @restaurant.price %> </p>
@@ -29,8 +30,10 @@
           <%= ingredient.name  %>
       <% end %>
     <% end %>
+
     </div>
   </div>
+
 </div>
 
     <%# <!--- Here the code for reviews"
