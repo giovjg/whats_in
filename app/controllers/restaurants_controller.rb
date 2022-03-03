@@ -7,20 +7,22 @@ class RestaurantsController < ApplicationController
         :dish_ingredients
       ).where.not("dish_ingredients.ingredient_id IN (?)", ingredient_params[:ingredients])
       @restaurants = Restaurant.joins(:dishes).where(dishes: { id: @dishes.pluck(:id) }).distinct
-      raise
+      @markers = @restaurants.geocoded.map do |restaurant|
+        {
+          lat: restaurant.latitude,
+          lng: restaurant.longitude
+        }
+      end
       # SELECT DISTINCT * restaurants JOINS dishes on dishes.restaurant_id = restaurants.id
       # WHERE dishes.id IN (1, 3, 4, 5)
     else
       @restaurants = Restaurant.all
-    end
-
-    # Adding Map
-    @restaurants = Restaurant.all
-    @markers = @restaurants.geocoded.map do |restaurant|
-      {
-        lat: restaurant.latitude,
-        lng: restaurant.longitude
-      }
+      @markers = @restaurants.geocoded.map do |restaurant|
+        {
+          lat: restaurant.latitude,
+          lng: restaurant.longitude
+        }
+      end
     end
   end
 
