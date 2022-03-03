@@ -5,7 +5,7 @@
 
   <% @restaurants.each do |restaurant| %>
      <%= restaurant.name %>
-     <!--<% if @restaurant.photo.attached? %> -->
+     <!--<% if restaurant.photo %> -->
       <!-- <%= cl_image_tag @restaurant.photo.key, height: 300, width: 400, crop: :fill %>-->
     <% end %>
 <% end %>

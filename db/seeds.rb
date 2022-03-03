@@ -75,7 +75,7 @@ puts "#{Ingredient.all.count} categories created"
 
 
 file =
-URI.open('https://www.restaurantesirio.es/sites/default/files/joanic2.jpg')
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/v1646319972/ugarit_restaurant_fvqzjk.jpg')
 ugarit = Restaurant.create!(
     name: 'Ugarit',
     category: 'Syrian',
@@ -95,7 +95,7 @@ hummus = Dish.create!(name:'Hummus' ,restaurant_id: ugarit.id)
 tabouleh = Dish.create!(name:'Tabouleh' ,restaurant_id: ugarit.id)
 
 file =
-URI.open('https://live.staticflickr.com/3854/15100148110_46631f9dd3.jpg')
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/v1646319972/almacen_restaurant_rfcclt.jpg')
 almacen = Restaurant.create!(
     name: 'El viejo Almacen',
     category: 'argentinian',
@@ -138,7 +138,7 @@ tacoMushroom = Dish.create!(name:'Taco mushrooms' ,restaurant_id: tierra.id)
 
 
 file =
-URI.open('https://img-4.linternaute.com/JDZXM0xn44XwKwk5j6JAJ7H8SPA=/540x540/b1cccf7af83a4232985e62c8546037cd/restaurant/125234.jpg')
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/v1646319972/Dolce-Pizza-comedor_restaurant_ertlrw.jpg')
 dolce = Restaurant.create!(
     name: 'Dolce pizza ' ,
     category: 'pizza' ,
@@ -160,14 +160,14 @@ cuattroFormaggi = Dish.create!(name:'Cuattro formaggi' ,restaurant_id: dolce.id)
 
 
 file =
-URI.open('https://media-cdn.tripadvisor.com/media/photo-s/12/e8/c7/85/photo0jpg.jpg')
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/v1646320995/274069923_468598974730254_2982254997917976405_n_pcvnx6.jpg')
 world = Restaurant.create!(
     name: 'Veg World India' ,
     category: 'indian' ,
     address: 'Carrer de Bruniquer, 24, 08012 Barcelona' ,
     telephone: '645181015' ,
     rating: 5.0,
-    price: '£££' ,
+    price: '£££',
     start_time: 1,
     end_time: 11
 )
@@ -179,7 +179,7 @@ pakoras = Dish.create!(name:'Pakoras' ,restaurant_id: world.id)
 korma = Dish.create!(name:'Korma' ,restaurant_id: world.id)
 
 file =
-URI.open('https://www.sillasmesas.es/blog/wp-content/uploads/2019/10/Decoracion-restaurantes-japoneses.jpg')
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/v1646319972/kobe_restaurant_dpjpgs.jpg')
 koby = Restaurant.create!(
     name: 'Koby Burgers' ,
     category: 'burger' ,
@@ -200,7 +200,7 @@ veggiburger = Dish.create!(name:'Veggiburger' ,restaurant_id: koby.id)
 chickenburger = Dish.create!(name:'Chickenburger' ,restaurant_id: koby.id)
 
 file =
-URI.open('https://photos1.blogger.com/blogger/4059/426/320/DSC05029%200608.jpg')
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/v1646319972/tomodashi_restaurant_ucv1q5.jpg')
 tomodachi = Restaurant.create!(
     name: 'Tomodachi' ,
     category: 'sushi' ,
@@ -219,7 +219,7 @@ uramaki = Dish.create!(name:'Uramaki' ,restaurant_id: tomodachi.id)
 temaki = Dish.create!(name:'Temaki' ,restaurant_id: tomodachi.id)
 
 file =
-URI.open('https://i.pinimg.com/originals/c0/8a/df/c08adfa5c6256661772afefe72d7301f.jpg')
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/v1646319972/piadina_restaurant_yup6sa.jpg')
 piadina = Restaurant.create!(
     name: 'La Piadina',
     category: 'italian',
@@ -239,7 +239,7 @@ piadina = Restaurant.create!(
  pastaNorma = Dish.create!(name:'Pasta Norma' ,restaurant_id: piadina.id)
 
  file =
- URI.open('https://i.pinimg.com/originals/c0/8a/df/c08adfa5c6256661772afefe72d7301f.jpg')
+ URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/v1646320000/yoma_restaurant_kgnw62.jpg')
  yoma = Restaurant.create!(
     name: 'Yoma' ,
     category: 'chinese' ,
@@ -259,7 +259,7 @@ piadina = Restaurant.create!(
  sweetAndSourPork = Dish.create!(name:'Sweet and Sour Pork' ,restaurant_id: yoma.id)
 
 file =
-URI.open('https://barcelonahacks.com/wp-content/uploads/sites/5/2017/01/kebab-barcelona.jpg')
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/v1646320921/sannin_restaurant_zyi6ws.jpg')
 shannin = Restaurant.create!(
     name: 'Sannin' ,
     category: 'libanise' ,
