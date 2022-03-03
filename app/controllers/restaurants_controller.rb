@@ -11,7 +11,8 @@ class RestaurantsController < ApplicationController
       @markers = @restaurants.geocoded.map do |restaurant|
         {
           lat: restaurant.latitude,
-          lng: restaurant.longitude
+          lng: restaurant.longitude,
+          info_window: render_to_string(partial: "info_window", locals: { restaurant: restaurant })
         }
       end
       # SELECT DISTINCT * restaurants JOINS dishes on dishes.restaurant_id = restaurants.id
@@ -21,16 +22,22 @@ class RestaurantsController < ApplicationController
       @markers = @restaurants.geocoded.map do |restaurant|
         {
           lat: restaurant.latitude,
-          lng: restaurant.longitude
+          lng: restaurant.longitude,
+          info_window: render_to_string(partial: "info_window", locals: { restaurant: restaurant })
         }
       end
     end
   end
 
   def show
-    @dishes = @restaurant.dishes.joins(
-      :dish_ingredients
-    ).where.not("dish_ingredients.ingredient_id IN (?)", ingredient_params[:ingredients])
+
+    if params.key?(:ingredients)
+      @dishes = @restaurant.dishes.joins(
+        :dish_ingredients
+      ).where.not("dish_ingredients.ingredient_id IN (?)", ingredient_params[:ingredients])
+    else
+      @dishes = @restaurant.dishes.all
+    end
   end
 
   private
