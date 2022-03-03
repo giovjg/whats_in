@@ -1,14 +1,14 @@
 <div class="show-main-container">
   <div class="container">
     <div class="card-trip">
-    <h1>Restaurant</h1>
+   
+    <h1><%= @restaurant.name %></h1>
     <% if @restaurant.photo.attached? %>
       <%= cl_image_tag @restaurant.photo.key %>
       <div class="card-trip-infos">
         <div>
-            <span><strong><%= @restaurant.name %></span>
             <p><%= @restaurant.category %></p>
-            <span><%= restaurant.rating %><!-- <i class="fas fa-star star-yellow"></i>--></span>
+            <span><%= restaurant.rating %></span>
             <p><%= @restaurant.price %> €</p>
             <p><%= @restaurant.telephone %></p>
              <p><%= @restaurant.address %></p>
@@ -25,9 +25,6 @@
      <% @dishes.each do |dish| %>
       <p><%= dish.name%></p>
     <% end %>
-    </div>
-    <%= link_to 'Home page', "/ " %>
-  </div>
 </div>
 
     <%# <!--- Here the code for reviews"
