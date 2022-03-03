@@ -31,7 +31,6 @@ class RestaurantsController < ApplicationController
     @dishes = @restaurant.dishes.joins(
       :dish_ingredients
     ).where.not("dish_ingredients.ingredient_id IN (?)", ingredient_params[:ingredients])
-    raise
   end
 
   private
