@@ -1,5 +1,15 @@
-.go{
+
+.go {
     color: $orange;
-    width: 30px;
-    height: 30px;
+    padding: 10px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    
+    .go:hover {
+        padding: 12px;
+        font-weight: bolder;
+    }
+
+
 }
+
