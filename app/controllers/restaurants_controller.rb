@@ -32,13 +32,12 @@ class RestaurantsController < ApplicationController
   end
 
   def show
-
-    if params.key?(:ingredients)
+    if params[:search].present?
       @dishes = @restaurant.dishes.joins(
         :dish_ingredients
       ).where.not("dish_ingredients.ingredient_id IN (?)", ingredient_params[:ingredients])
     else
-      @dishes = @restaurant.dishes.all
+      @dishes = @restaurant.dishes.includes(dish_ingredients: :ingredients)
     end
   end
 

@@ -23,8 +23,11 @@
         <h1>No picture</h1>
       <% end %>
      <!--  Here the code for dishes list for a given restaurant-->
-     <% @dishes.each do |dish| %>
+    <% @dishes.each do |dish| %>
       <p><%= dish.name%></p>
+      <% dish.ingredients.each do |ingredient| %>
+          <%= ingredient.name  %>
+      <% end %>
     <% end %>
     </div>
   </div>
