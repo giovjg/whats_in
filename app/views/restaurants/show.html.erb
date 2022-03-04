@@ -2,7 +2,7 @@
   <div class="container">
     <div class="card-trip">
 
-   
+
     <h1><%= @restaurant.name %></h1>
 
     <% if @restaurant.photo.attached? %>
@@ -26,6 +26,10 @@
      <!--  Here the code for dishes list for a given restaurant-->
     <% @dishes.each do |dish| %>
       <p><%= dish.name%></p>
+      <!--<% if @dish.photo.attached? %>
+      <%= cl_image_tag @dish.photo.key, height: 300, width: 400, crop: :fill %>
+      <div class="card-trip-infos">
+        <div> %>-->
       <% dish.ingredients.each do |ingredient| %>
           <%= ingredient.name  %>
       <% end %>
