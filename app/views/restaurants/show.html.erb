@@ -1,7 +1,7 @@
 <div class="show-main-container">
-    <div class="show-banner" style="background-image: url(<%= cl_image_path @restaurant.photo.key, height: 300, width: 400, crop: :fill if @restaurant.photo.attached? %>)">
-      <h1 class="rest-name-show"><%= @restaurant.name %></h1>
-    </div>
+  <div class="show-banner" style="background-image: url(<%= cl_image_path @restaurant.photo.key, height: 300, width: 400, crop: :fill if @restaurant.photo.attached? %>)">
+    <h1 class="rest-name-show"><%= @restaurant.name %></h1>
+  </div>
   <div class="container">
     <div class="card-trip">
       <div class="card-trip-infos">
@@ -34,12 +34,12 @@
     <div class="card-product-infos">
       <h2><%= dish.name%></h2>
       <% dish.ingredients.each do |ingredient| %>
-          <%= ingredient.name  %>
-          <% end %>
-       </div>
+        <%= ingredient.name  %>
+      <% end %>
     </div>
+  </div>
   <% end %>
-
+</div>
     <%# <!--- Here the code for reviews"
     <%# <h2>Reviews</h2> %>
     <%# <ul class="list-group"> %>
