@@ -1,37 +1,31 @@
 <div class="show-main-container">
+    <div class="show-banner" style="background-image: url(<%= cl_image_path @restaurant.photo.key, height: 300, width: 400, crop: :fill if @restaurant.photo.attached? %>)">
+      <h1 class="rest-name-show"><%= @restaurant.name %></h1>
+    </div>
   <div class="container">
     <div class="card-trip">
-
-
-   
-    <h1 class="rest-name-show"><%= @restaurant.name %></h1>
-
-    <% if @restaurant.photo.attached? %>
-      <%= cl_image_tag @restaurant.photo.key, height: 300, width: 400, crop: :fill %>
       <div class="card-trip-infos">
         <div>
-            <p><%= @restaurant.category %></p>
-           <p><%= @restaurant.rating %></p>
-            <p><%= @restaurant.price %> </p>
-            <p><%= @restaurant.telephone %></p>
-             <p><%= @restaurant.address %></p>
-            <p><%= @restaurant.adaptability %></p>
-            <p><%= @restaurant.wifi %></p>
-            <p><%= @restaurant.start_time %></p> - <p><%= @restaurant.end_time%></p>
-            <p><%= @restaurant.dishes.name %></p>
+            <p class = "restaurant-category"><strong><%= @restaurant.category %></p>
+            <p>Rating: <%= @restaurant.rating %></p>
+            <p>Phone: <%= @restaurant.telephone %></p>
+             <p>Address: <%= @restaurant.address %></p>
+            <% if @restaurant.adaptability %>
+            <p> Will not change ingredients.</p>
+            <% else %>
+            <p> Will change ingredients. </p>
+            <% end %>
+            <% if @restaurant.wifi %>
+            <%= @restaurant.wifi %><i class="fa fa-wifi" aria-hidden="true"></i>
+            <% else %>
+            <%= @restaurant.wifi %><img src="https://img.icons8.com/plumpy/24/000000/without-internet.png"/>
+            <% end %>
+            <div class="d-flex p-2 bd-highlight">
+            <p><%= @restaurant.start_time %>:00 PM </p> -- <p><%= @restaurant.end_time %>:00 MD</p>
+            </div>
           </div>
        </div>
-      <%else%>
-        <h1>No picture</h1>
-      <% end %>
      <!--  Here the code for dishes list for a given restaurant-->
-
-  <!-- <% @dishes.each do |dish| %>
-      <p><%= dish.name%></p>-->
-      <!-- <% if @dish.photo.attached? %>
-      <%= cl_image_tag @dish.photo.key, height: 300, width: 400, crop: :fill %> 
-      <div class="card-trip-infos">
-        <div> %> -->
 
 <% @dishes.each do |dish| %>
   <div class="card-product">
@@ -44,7 +38,7 @@
           <% end %>
     </div>
   </div>
-      
+
 <% end %>
 
     </div>
