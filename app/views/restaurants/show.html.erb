@@ -3,7 +3,7 @@
     <div class="card-trip">
 
    
-    <h1><%= @restaurant.name %></h1>
+    <h1 class="rest-name-show"><%= @restaurant.name %></h1>
 
     <% if @restaurant.photo.attached? %>
       <%= cl_image_tag @restaurant.photo.key, height: 300, width: 400, crop: :fill %>
@@ -24,12 +24,18 @@
         <h1>No picture</h1>
       <% end %>
      <!--  Here the code for dishes list for a given restaurant-->
-    <% @dishes.each do |dish| %>
-      <p><%= dish.name%></p>
+<% @dishes.each do |dish| %>
+  <div class="card-product">
+    <img src="https://images.unsplash.com/photo-1610300034180-d55d519ca946?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=837&q=80" />
+    <div class="card-product-infos">
+      <h2><%= dish.name%></h2>
       <% dish.ingredients.each do |ingredient| %>
           <%= ingredient.name  %>
-      <% end %>
-    <% end %>
+          <% end %>
+    </div>
+  </div>
+      
+<% end %>
 
     </div>
   </div>
