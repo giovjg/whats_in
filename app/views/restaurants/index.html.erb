@@ -1,6 +1,6 @@
 
 <details>
-<summary>ingredients</summary>
+<summary class="color_ingredient"> Ingredients</summary>
 <%= simple_form_for :search, url: "/restaurants", method: "GET" do |f| %>
   <%= f.input :ingredients, legend_tag: false, collection: Ingredient.all, as: :check_boxes,
               include_hidden:false, include_blank: false, input_html: { class: "tag-selector" },
