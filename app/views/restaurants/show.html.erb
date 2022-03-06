@@ -6,7 +6,7 @@
     <div class="card-trip">
       <div class="card-trip-infos">
         <div>
-            <p class = "restaurant-category"><strong><%= @restaurant.category %></p>
+            <p class = "restaurant-category" ><strong><%= @restaurant.category %></p>
             <p>Rating: <%= @restaurant.rating %></p>
             <p>Phone: <%= @restaurant.telephone %></p>
             <p>Address: <%= @restaurant.address %></p>
@@ -25,26 +25,19 @@
             </div>
           </div>
        </div>
-      </div>
-    </div>
-     <!--  Here the code for dishes list for a given restaurant-->
-<% @dishes.each do |dish| %>
-  <div class="card-product">
-    <img src="https://images.unsplash.com/photo-1610300034180-d55d519ca946?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=837&q=80" />
-    <div class="card-product-infos">
-      <h2><%= dish.name%></h2>
-      <% dish.ingredients.each do |ingredient| %>
-        <%= ingredient.name  %>
-      <% end %>
-    </div>
+
+     <details>
+      <summary class="color_ingredient"> Available dishes you can eat!</summary>
+      <% @dishes.each do |dish| %>
+        <div class="card-product">
+          <img src="https://images.unsplash.com/photo-1610300034180-d55d519ca946?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=837&q=80" />
+          <div class="card-product-infos">
+            <h2><%= dish.name%></h2>
+            <% dish.ingredients.each do |ingredient| %>
+              <%= ingredient.name  %>
+            <% end %>
+          </div>
+        </div>
+        <% end %>
+        </details>
   </div>
-  <% end %>
-</div>
-    <%# <!--- Here the code for reviews"
-    <%# <h2>Reviews</h2> %>
-    <%# <ul class="list-group"> %>
-      <%# <% @restaurant.reviews.each do |review| %>
-        <%# <li class="list-group-item"><%= review.content %>
-      <%# <% end %>
-    <%# </ul> %>
-    <%# <%= link_to 'Leave a review', new_restaurant_review_path(@restaurant) %>
