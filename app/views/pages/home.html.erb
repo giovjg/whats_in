@@ -2,6 +2,8 @@
 <h1 class="fun">Let's make eating fun again !</h1>
 
 <form action="/restaurants" method="get">
-  <input type="text" name="address" placeholder="Type your address!">
+  <input type="text" name="address" placeholder="Type your address!"
+          input_html: { data: { geocoder_target: "address" } },
+          wrapper_html: { data: { controller: "geocoder", geocoder_api_key_value: ENV['MAPBOX_API_KEY'] } }>
   <input type="submit" value="Go">
 </form>
