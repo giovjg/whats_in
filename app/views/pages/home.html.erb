@@ -3,7 +3,7 @@
 
   <form action="/restaurants" method="get" data-controller="geocoder"  data-geocoder-api-key-value="<%= ENV["MAPBOX_API_KEY"] %>">
     <input type="text" name="address" placeholder="Type your address!"
-            data-geocoder-target="address">
+            data-geocoder-target="address" class="d-none">
     <input type="submit" value="Go">
   </form>
 </div>
