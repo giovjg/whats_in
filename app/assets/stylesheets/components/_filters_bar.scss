@@ -2,12 +2,12 @@
 .tag-item {
     display: inline-block;
   }
-  
+
   .tag-selector {
     position: absolute;
     transform: scale(0);
   }
-  
+
   .tag-selector + label {
     cursor: pointer;
     display: inline-block;
@@ -21,7 +21,19 @@
     margin-bottom: 0.4rem;
     font-weight: normal;
   }
-  
+
   .tag-selector:checked + label {
     color: white;
   }
+
+  .category-name {
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  opacity: 0.5;
+  font-weight: 200;
+  letter-spacing: 0.2em;
+}

@@ -1,11 +1,14 @@
 
 <details>
-<summary class="color_ingredient"> Ingredients</summary>
+<summary class="color_ingredient">Ingredient Categories</summary>
 <%= simple_form_for :search, url: "/restaurants", method: "GET" do |f| %>
-  <%= f.input :ingredients, legend_tag: false, collection: Ingredient.all, as: :check_boxes,
+<% IngredientCategory.all.each do |cat| %>
+<h2 class = "category-name"> <%= cat.name.capitalize %></h2>
+  <%= f.input :ingredients, legend_tag: false, collection: cat.ingredients, as: :check_boxes,
               include_hidden:false, include_blank: false, input_html: { class: "tag-selector" },
               label_html: { class: "d-none" },
               item_wrapper_class: 'tag-item' %>
+          <%end %>
   <%= f.submit "Search", class: "btn" %>
 <% end %>
 </details>
@@ -25,7 +28,7 @@
             <h2><%= link_to restaurant.name, restaurant_path(restaurant, search: {ingredients: @ingredients_query}), class:"rest-name-card" %></h2>
             <p><%= restaurant.category %></p>
           </div>
-          <h2 class="card-trip-pricing"><i class="fas fa-star star"></i><%= restaurant.rating %></h2>
+          <strong class="card-trip-pricing"><i class="fas fa-star star"></i><%= restaurant.rating %></strong>
         </div>
       </div>
     <% end %>
