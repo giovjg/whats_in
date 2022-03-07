@@ -3,16 +3,36 @@
     <h1 class="rest-name-show"><%= @restaurant.name %></h1>
   </div>
   <div class="container">
-    <div class="card-trip">
-      <div class="card-trip-infos">
-  
+    <div class="card-trip show-info">
+      <div class="first-row">
         <div class="top-info">
           <p><%= @restaurant.price %></p>
           <h2 class= "restaurant-category"><%= @restaurant.category %></h2>
           <h2 class="card-trip-pricing"><i class="fas fa-star star"></i><%= @restaurant.rating %></h2>
         </div>
-        <h2>Address: <%= @restaurant.address %></h2>
-        </div class="top-info">
+
+        </div >
+        <div class="top-info">
+          
+          <% if @restaurant.wifi %>
+            <img id="icon" src="https://img.icons8.com/windows/32/000000/wifi--v2.png"/>
+          <% else %>
+            <img id="icon" src="https://img.icons8.com/plumpy/24/000000/without-internet.png"/>
+          <% end %>
+          <div class="">
+            <p><strong><%= @restaurant.start_time %>:00 PM - <%= @restaurant.end_time %>:00 MD</strong></p>
+          </div>
+          <% if @restaurant.terrace %>
+            <img src="https://cdn-icons-png.flaticon.com/512/358/358824.png"/>
+          <% else %>
+            <img id="icon" src="https://cdn-icons-png.flaticon.com/512/358/358824.png"/>
+          <% end %>
+        </div>
+
+        <div>
+          <h2>Address: <%= @restaurant.address %></h2>
+        </div>
+
         <div class="available">
           <% if @restaurant.adaptability %>
             <p class="red">This restaurant will <strong>Not</strong> change ingredients.</p>
@@ -20,23 +40,8 @@
             <p class="green">This restaurant <strong>Can</strong> make changes on your ingredients. </p>
           <% end %>
         </div>
-
-        <div class="d-flex p-2 bd-highlight">
-          <p><strong><%= @restaurant.start_time %>:00 PM - <%= @restaurant.end_time %>:00 MD</strong></p>
-        </div>    
-        <div >
-            <% if @restaurant.wifi %>
-              <img id="icon" src="https://img.icons8.com/windows/32/000000/wifi--v2.png"/>
-            <% else %>
-              <img id="icon" src="https://img.icons8.com/plumpy/24/000000/without-internet.png"/>
-            <% end %>
-            <% if @restaurant.terrace %>
-              <img src="https://cdn-icons-png.flaticon.com/512/358/358824.png"/>
-            <% else %>
-              <img id="icon" src="https://cdn-icons-png.flaticon.com/512/358/358824.png"/>
-            <% end %>
-        </div>
           </div>
+
         <button class="btn" id="phone">Contact the restaurant</button>
        </div>
 
