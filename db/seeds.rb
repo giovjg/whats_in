@@ -105,7 +105,7 @@ file =
 URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/v1646319972/almacen_restaurant_rfcclt.jpg')
 almacen = Restaurant.create!(
     name: 'El viejo Almacen',
-    category: 'argentinian',
+    category: 'Argentinian',
     address: 'Carrer de Ramón y Cajal, 158, 08024 Barcelona',
     telephone: '645181012',
     rating: 1.5,
@@ -130,7 +130,7 @@ file =
 URI.open("https://www.tierraburritos.com/wp-content/uploads/Glories12-1024x633.jpg")
 tierra = Restaurant.create!(
     name: 'Tierra' ,
-    category: 'mexican' ,
+    category: 'Mexican' ,
     address: "Carrer D'avila, 171, 08018 Barcelona" ,
     telephone: '645181013' ,
     rating: 3.5,
@@ -156,7 +156,7 @@ file =
 URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/v1646319972/Dolce-Pizza-comedor_restaurant_ertlrw.jpg')
 dolce = Restaurant.create!(
     name: 'Dolce pizza ' ,
-    category: 'pizza' ,
+    category: 'Pizza' ,
     address: 'Carrer d Hipòlit Lázaro, 34, 08025 Barcelona' ,
     telephone: '645181014' ,
     rating: 4.5,
@@ -183,7 +183,7 @@ file =
 URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/v1646320995/274069923_468598974730254_2982254997917976405_n_pcvnx6.jpg')
 world = Restaurant.create!(
     name: 'Veg World India' ,
-    category: 'indian' ,
+    category: 'Indian' ,
     address: 'Carrer de Bruniquer, 24, 08012 Barcelona' ,
     telephone: '645181015' ,
     rating: 5.0,
@@ -206,7 +206,7 @@ file =
 URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/v1646319972/kobe_restaurant_dpjpgs.jpg')
 koby = Restaurant.create!(
     name: 'Koby Burgers' ,
-    category: 'burger' ,
+    category: 'Burger' ,
     address: 'Carrer de Marià Cubí, 92, 08021 Barcelona' ,
     telephone: '645181016' ,
     rating: 1.5,
@@ -232,7 +232,7 @@ file =
 URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/v1646319972/tomodashi_restaurant_ucv1q5.jpg')
 tomodachi = Restaurant.create!(
     name: 'Tomodachi' ,
-    category: 'sushi' ,
+    category: 'Sushi' ,
     address: ' Travessera de Gràcia, 250, 08025 Barcelona' ,
     telephone: '645181017' ,
     rating: 5.0,
@@ -255,7 +255,7 @@ file =
 URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/v1646319972/piadina_restaurant_yup6sa.jpg')
 piadina = Restaurant.create!(
     name: 'La Piadina',
-    category: 'italian',
+    category: 'Italian',
     address: 'Carrer de la Santa Creu, 1, 08024 Barcelona',
     telephone: '645181018',
     rating: 4.5,
@@ -280,7 +280,7 @@ piadina = Restaurant.create!(
  URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/v1646320000/yoma_restaurant_kgnw62.jpg')
  yoma = Restaurant.create!(
     name: 'Yoma' ,
-    category: 'chinese' ,
+    category: 'Chinese' ,
     address: 'Travessera de Gràcia, 281, 08025 Barcelona',
     telephone: '645181019' ,
     rating: 3.5,
@@ -304,7 +304,7 @@ file =
 URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/v1646320921/sannin_restaurant_zyi6ws.jpg')
 shannin = Restaurant.create!(
     name: 'Sannin' ,
-    category: 'libanise' ,
+    category: 'Lebanise' ,
     address: "Carrer de l'Encarnació, 44, 08024 Barcelona" ,
     telephone: '645181020' ,
     rating: 3.5,

@@ -10,3 +10,34 @@
     width: fit-content
   }
 }
+
+.top-info{
+  width: 100%;
+  display: flex;
+  //justify-content: center;
+  justify-content: space-between;
+}
+
+#icon{
+  width: 20px;
+  height: 20px;
+}
+
+.red{
+  color: $orange;
+ 
+}
+
+.green{
+  color: green;
+}
+
+.available{
+  display: flex;
+  justify-content: center;
+
+
+  i{
+    padding: 10px;
+  }
+}
