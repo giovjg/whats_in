@@ -8,12 +8,13 @@
 #   Character.create(name: 'Luke', movie: movies.first
 
 require 'open-uri'
-IngredientCategory.destroy_all
+
 DishIngredient.destroy_all
 Dish.destroy_all
 Restaurant.destroy_all
 User.destroy_all
 Ingredient.destroy_all
+IngredientCategory.destroy_all
 
 puts "starting the seeds"
 
