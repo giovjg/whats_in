@@ -16,7 +16,7 @@ class RestaurantsController < ApplicationController
     end
 
     if params[:address]
-      @restaurants = @restaurants.near(params[:address], 3)
+      @restaurants = @restaurants.near(params[:address], 1.5)
     end
     @markers = @restaurants.geocoded.map do |restaurant|
       {

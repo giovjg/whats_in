@@ -1,6 +1,16 @@
+.search-container {
+  display: flex;
+}
+
 .mapboxgl-ctrl-geocoder {
-  max-width: none;
-  width: 100%;
-  border: 1px solid lightgrey;
-  box-shadow: none;
+  // width: 5%;
+}
+
+.go-btn {
+  padding: 0 10px;
+
+}
+
+.search-field {
+  width: 10%;
 }
