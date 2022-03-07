@@ -304,7 +304,8 @@ file =
 URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/v1646320921/sannin_restaurant_zyi6ws.jpg')
 shannin = Restaurant.create!(
     name: 'Sannin' ,
-    category: 'Lebanise' ,
+
+    category: 'lebanese' ,
     address: "Carrer de l'Encarnació, 44, 08024 Barcelona" ,
     telephone: '645181020' ,
     rating: 3.5,
