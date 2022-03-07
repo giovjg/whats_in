@@ -30,10 +30,33 @@
   font-size: 13px;
   font-weight: bold;
   margin-bottom: 30px;
-  text-align: center;
+  text-align: left;
   text-transform: uppercase;
-  display: flex;
   opacity: 0.5;
   font-weight: 200;
   letter-spacing: 0.2em;
+  padding-top: .1rem;
+  padding-left: .5em;
+  background-color: gray;
+  height: 100%;
+  display: block;
+}
+
+.ing-cat-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  margin-left: -.5em;
+  margin-top: -.5em;
+  margin-right: -.5em;
+
+}
+
+.search_ingredients, .category-name {
+  border-bottom: 1px black solid;
+}
+
+
+.search_ingredients{
+  padding-left: 10px;
+  margin-bottom: 0 !important;
 }

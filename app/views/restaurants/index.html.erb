@@ -1,17 +1,20 @@
 
 <details>
-<summary class="color_ingredient">Ingredient Categories</summary>
-<%= simple_form_for :search, url: "/restaurants", method: "GET" do |f| %>
-<% IngredientCategory.all.each do |cat| %>
-<h2 class = "category-name"> <%= cat.name.capitalize %></h2>
-  <%= f.input :ingredients, legend_tag: false, collection: cat.ingredients, as: :check_boxes,
+<summary class="color_ingredient">Ingredients</summary>
+    <%= simple_form_for :search, url: "/restaurants", method: "GET" do |f| %>
+  <div class="ing-cat-container">
+    <% IngredientCategory.all.each do |cat| %>
+      <h2 class="category-name"> <%= cat.name.capitalize %></h2>
+    <%= f.input :ingredients, legend_tag: false, collection: cat.ingredients, as: :check_boxes,
               include_hidden:false, include_blank: false, input_html: { class: "tag-selector" },
               label_html: { class: "d-none" },
               item_wrapper_class: 'tag-item' %>
           <%end %>
+  </div>
   <%= f.submit "Search", class: "btn" %>
-<% end %>
+  <% end %>
 </details>
+
 
 <div style="width: 100%; height: 250px;"
   data-controller="mapbox"
