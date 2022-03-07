@@ -118,14 +118,46 @@ almacen = Restaurant.create!(
 )
 almacen.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646669732/dishes/ampanadas/photo-1634750188038-d0f806ebe6c5_ql6pzg.avif')
 empanadaDeCarne = Dish.create!(name:'Empanada de carne' ,restaurant_id: almacen.id)
+empanadaDeCarne.photo.attach(io: file, filename: 'empanadaDeCarne.jpg', content_type: 'image/jpg')
+
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646669721/dishes/ampanadas/photo-1646314230198-e27c375e1a2a_ysk1m2.avif')
 empanadaVegetal = Dish.create!(name:'Empanada vegetal' ,restaurant_id: almacen.id)
+empanadaVegetal.photo.attach(io: file, filename: 'empanadaVegetal.jpg', content_type: 'image/jpg')
+
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646669714/dishes/ampanadas/photo-1634750188025-aac853781a96_pvzjw7.avif')
 empanadaJamonYQueso = Dish.create!(name:'Empanada jamon y queso' ,restaurant_id: almacen.id)
+empanadaJamonYQueso.photo.attach(io: file, filename: 'empanadaJamonYQueso.jpg', content_type: 'image/jpg')
+
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646669697/dishes/ampanadas/photo-1618686397306-b1a4a556f138_frqjl0.avif')
 empandaDePollo = Dish.create!(name:'Empanda de pollo' ,restaurant_id: almacen.id)
+empandaDePollo.photo.attach(io: file, filename: 'empandaDePollo.jpg', content_type: 'image/jpg')
+
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646669680/dishes/ampanadas/istockphoto-1297540439-170667a_tjtkhf.jpg')
 empanadaDeBacalao = Dish.create!(name:'Empanada de bacalao' ,restaurant_id: almacen.id)
+empanadaDeBacalao.photo.attach(io: file, filename: 'empanadaDeBacalao.jpg', content_type: 'image/jpg')
+
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646669680/dishes/ampanadas/istockphoto-1297540439-170667a_tjtkhf.jpg')
 empanadaSeafood = Dish.create!(name:'Empanada seafood' ,restaurant_id: almacen.id)
+empanadaSeafood.photo.attach(io: file, filename: 'empanadaSeafood.jpg', content_type: 'image/jpg')
+
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/v1646669673/dishes/ampanadas/istockphoto-1176364232-170667a_vh6fzr.jpg')
 empanadaSoya = Dish.create!(name:'Empanada soya' ,restaurant_id: almacen.id)
+empanadaSoya.photo.attach(io: file, filename: 'empanadaSoya.jpg', content_type: 'image/jpg')
+
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646669670/dishes/ampanadas/istockphoto-521954007-170667a_vvuyli.jpg')
 empandaDulce = Dish.create!(name:'Empanda dulce' ,restaurant_id: almacen.id)
+empandaDulce.photo.attach(io: file, filename: 'empandaDulce.jpg', content_type: 'image/jpg')
+
 
 file =
 URI.open("https://www.tierraburritos.com/wp-content/uploads/Glories12-1024x633.jpg")
@@ -143,14 +175,58 @@ tierra = Restaurant.create!(
 )
 tierra.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646671712/dishes/tacos/photo-1615870216519-2f9fa575fa5c_foxakg.avif')
 tacoAlPastor = Dish.create!(name:'Taco al pastor' ,restaurant_id: tierra.id)
+tacoAlPastor.photo.attach(io: file, filename: 'tacoAlPastor.jpg', content_type: 'image/jpg')
+
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646671702/dishes/tacos/photo-1565299585323-38d6b0865b47_savkdd.avif')
 tacoCarnitas = Dish.create!(name:'Taco carnitas' ,restaurant_id: tierra.id)
+tacoCarnitas.photo.attach(io: file, filename: 'tacoCarnitas.jpg', content_type: 'image/jpg')
+
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/v1646671694/dishes/tacos/photo-1504544750208-dc0358e63f7f_i1yhwl.avif')
 tacoVeg = Dish.create!(name:'Taco veg' ,restaurant_id: tierra.id)
+tacoVeg.photo.attach(io: file, filename: 'tacoVeg.jpg', content_type: 'image/jpg')
+
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646671688/dishes/tacos/photo-1551504734-5ee1c4a1479b_a6hcfx.avif')
 tacoMushroom = Dish.create!(name:'Taco mushrooms' ,restaurant_id: tierra.id)
+tacoMushroom.photo.attach(io: file, filename: 'tacoMushroom.jpg', content_type: 'image/jpg')
+
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646671674/dishes/tacos/istockphoto-1341594041-170667a_uxvrz0.jpg')
 tacoPescado = Dish.create!(name:'Taco pescado' ,restaurant_id: tierra.id)
+tacoPescado.photo.attach(io: file, filename: 'tacoPescado.jpg', content_type: 'image/jpg')
+
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646671669/dishes/tacos/istockphoto-1298809774-170667a_id47ss.jpg')
 tacoSeafood = Dish.create!(name:'Taco seafood' ,restaurant_id: tierra.id)
+tacoSeafood.photo.attach(io: file, filename: 'tacoSeafood.jpg', content_type: 'image/jpg')
+
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646671664/dishes/tacos/istockphoto-1296272943-170667a_svuyhg.jpg')
 tacoTofu = Dish.create!(name:'Taco tofu' ,restaurant_id: tierra.id)
+tacoTofu.photo.attach(io: file, filename: 'tacoTofu.jpg', content_type: 'image/jpg')
+
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646671895/dishes/tacos/photo-1618416019363-34805b84d3c1_qwfbdw.avif')
 tacoChorizo = Dish.create!(name:'Taco chorizo' ,restaurant_id: tierra.id)
+tacoChorizo.photo.attach(io: file, filename: 'tacoChorizo.jpg', content_type: 'image/jpg')
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 file =
@@ -218,16 +294,44 @@ koby = Restaurant.create!(
 )
 koby.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
-
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646666935/dishes/burgers/photo-1606755962773-d324e0a13086_hprkal.avif')
 hamburger = Dish.create!(name:'Hamburger' ,restaurant_id: koby.id)
-cheeseburger = Dish.create!(name:'Cheeseburger' ,restaurant_id: koby.id)
-veggiburger = Dish.create!(name:'Veggiburger' ,restaurant_id: koby.id)
-chickenburger = Dish.create!(name:'Chickenburger' ,restaurant_id: koby.id)
-fishburger = Dish.create!(name:'Fishburger' ,restaurant_id: koby.id)
-seafoodburger = Dish.create!(name:'Seafoodburger' ,restaurant_id: koby.id)
-tofuburger = Dish.create!(name:'Tofuburger' ,restaurant_id: koby.id)
-carrotburger = Dish.create!(name:'Carrotburger' ,restaurant_id: koby.id)
+hamburger.photo.attach(io: file, filename: 'hamburger.jpg', content_type: 'image/jpg')
 
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646666883/dishes/burgers/photo-1565299507177-b0ac66763828_qjakjz.avif')
+cheeseburger = Dish.create!(name:'Cheeseburger' ,restaurant_id: koby.id)
+cheeseburger.photo.attach(io: file, filename: 'cheeseburger.jpg', content_type: 'image/jpg')
+
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646666929/dishes/burgers/photo-1582196016295-f8c8bd4b3a99_nkjbh7.avif')
+veggiburger = Dish.create!(name:'Veggiburger' ,restaurant_id: koby.id)
+veggiburger.photo.attach(io: file, filename: 'veggiburger.jpg', content_type: 'image/jpg')
+
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/v1646666828/dishes/burgers/photo-1568901346375-23c9450c58cd_r8hc8a.avif')
+chickenburger = Dish.create!(name:'Chickenburger' ,restaurant_id: koby.id)
+chickenburger.photo.attach(io: file, filename: 'chickenburger.jpg', content_type: 'image/jpg')
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646666897/dishes/burgers/photo-1572802419224-296b0aeee0d9_r9xpp8.avif')
+fishburger = Dish.create!(name:'Fishburger' ,restaurant_id: koby.id)
+fishburger.photo.attach(io: file, filename: 'fishburger.jpg', content_type: 'image/jpg')
+
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646666916/dishes/burgers/photo-1566217688581-b2191944c2f9_cifdos.avif')
+seafoodburger = Dish.create!(name:'Seafoodburger' ,restaurant_id: koby.id)
+seafoodburger.photo.attach(io: file, filename: 'seafoodburger.jpg', content_type: 'image/jpg')
+
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646666871/dishes/burgers/photo-1596662951482-0c4ba74a6df6_aokmgj.avif')
+tofuburger = Dish.create!(name:'Tofuburger' ,restaurant_id: koby.id)
+tofuburger.photo.attach(io: file, filename: 'tofuburger.jpg', content_type: 'image/jpg')
+
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646666845/dishes/burgers/photo-1550547660-d9450f859349_l17q8e.avif')
+carrotburger = Dish.create!(name:'Carrotburger' ,restaurant_id: koby.id)
+carrotburger.photo.attach(io: file, filename: 'carrotburger.jpg', content_type: 'image/jpg')
 
 file =
 URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/v1646319972/tomodashi_restaurant_ucv1q5.jpg')
@@ -267,13 +371,43 @@ piadina = Restaurant.create!(
  )
  piadina.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646672729/dishes/pasta/photo-1595295333158-4742f28fbd85_ftjnju.avif')
  vongole = Dish.create!(name:'Vongole' ,restaurant_id: piadina.id)
+
+
+ file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646672697/dishes/pasta/istockphoto-1309699313-170667a_yjyu30.jpg')
  spagettiAlPesto = Dish.create!(name:'Spagetti al pesto' ,restaurant_id: piadina.id)
+
+
+ file =
+ URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646673017/dishes/pasta/photo-1608219992759-8d74ed8d76eb_lupnpa.avif')
  carbonara = Dish.create!(name:'Carbonara' ,restaurant_id: piadina.id)
+
+
+ file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646672687/dishes/pasta/photo-1608897013039-887f21d8c804_guojb3.avif')
  pastaNorma = Dish.create!(name:'Pasta Norma' ,restaurant_id: piadina.id)
+
+
+ file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646672783/dishes/pasta/photo-1600803907087-f56d462fd26b_x5ydrt.avif')
  aglio = Dish.create!(name:'Aglio' ,restaurant_id: piadina.id)
+
+
+ file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646672722/dishes/pasta/photo-1563379926898-05f4575a45d8_xr5v8m.avif')
  parmigiana = Dish.create!(name:'Parmigiana' ,restaurant_id: piadina.id)
+
+
+ file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646672711/dishes/pasta/photo-1579684947550-22e945225d9a_xnyndi.avif')
  provolone = Dish.create!(name:'Provolone' ,restaurant_id: piadina.id)
+
+
+ file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646672717/dishes/pasta/photo-1551183053-bf91a1d81141_rqbdfa.avif')
  pastaAlaTonna = Dish.create!(name:'Pasta ala tonna' ,restaurant_id: piadina.id)
 
 
