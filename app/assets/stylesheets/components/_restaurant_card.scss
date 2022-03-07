@@ -6,29 +6,33 @@
     margin-top: 5px;
     margin-bottom: 15px;
   }
-  
+
   .card-trip > img {
     height: 200px;
     width: 100%;
     object-fit: cover;
   }
-  
+
   .card-trip h2 {
     font-size: 16px;
     font-weight: bold;
-    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    opacity: 0.5;
+    font-weight: 200;
+    letter-spacing: 0.2em;
   }
-  
+
   .card-trip p {
     font-size: 12px;
     margin: 0;
   }
-  
+
   .rest-name-card{
     text-decoration: none;
     color: #11121c;
   }
-  
+
   .card-trip .card-trip-infos {
     padding: 16px;
     display: flex;
@@ -36,7 +40,7 @@
     align-items: flex-end;
     position: relative;
   }
-  
+
   .card-trip-infos .card-trip-user {
     position: absolute;
     right: 16px;
