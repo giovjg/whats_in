@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_02_152712) do
+ActiveRecord::Schema.define(version: 2022_03_07_103831) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -90,7 +90,7 @@ ActiveRecord::Schema.define(version: 2022_03_02_152712) do
     t.string "address"
     t.string "telephone"
     t.float "rating"
-    t.float "price"
+    t.string "price"
     t.boolean "wifi"
     t.integer "start_time"
     t.integer "end_time"
@@ -98,6 +98,7 @@ ActiveRecord::Schema.define(version: 2022_03_02_152712) do
     t.string "name"
     t.float "latitude"
     t.float "longitude"
+    t.boolean "terrace"
   end
 
   create_table "users", force: :cascade do |t|
