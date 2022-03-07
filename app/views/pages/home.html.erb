@@ -1,8 +1,17 @@
 <div>
   <h1 class="fun">Let's make eating fun again !</h1>
-
   <form action="/restaurants" method="get">
     <input type="text" name="address" placeholder="Where do you want to eat?">
     <input class="go" type="submit" value="Go">
   </form>
 </div>
+  <div class="form-container">
+    <form action="/restaurants" method="get" data-controller="geocoder"  data-geocoder-api-key-value="<%= ENV["MAPBOX_API_KEY"] %>" class="search-container">
+      <div data-geocoder-target="container"></div>
+      <input type="text" name="address" placeholder="Type your address!"
+              data-geocoder-target="address" class="d-none">
+      <input type="submit" value="Go" class="go">
+    </form>
+  </div>
+</div>
+
