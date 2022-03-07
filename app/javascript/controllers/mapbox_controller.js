@@ -10,7 +10,6 @@ export default class extends Controller {
 
   connect() {
     mapboxgl.accessToken = this.apiKeyValue
-
     this.map = new mapboxgl.Map({
       container: this.element,
       style: "mapbox://styles/mapbox/streets-v10"
@@ -25,10 +24,11 @@ export default class extends Controller {
   #addMarkersToMap() {
     this.markersValue.forEach((marker) => {
       const popup = new mapboxgl.Popup().setHTML(marker.info_window)
-
       // Create a HTML element for your custom marker
-      // const customMarker = document.createElement("div")
-      // customMarker.className = "marker"
+      const customMarker = document.createElement("div")
+      customMarker.className = "marker"
+      console.log(customMarker.style)
+      customMarker.style.color = "black"
       // customMarker.style.backgroundImage = `url('${marker.image_url}')`
       // customMarker.style.backgroundSize = "contain"
       // customMarker.style.width = "25px"
