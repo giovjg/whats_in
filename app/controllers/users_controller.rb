@@ -1,8 +1,10 @@
 class UsersController < ApplicationController
   def update_profile
-    current_user.allergies.destroy_all
-    current_user.update!(user_params)
-    redirect_to profile_users_path, notice: "Updated"
+    if params[:user]
+      current_user.allergies.destroy_all
+      current_user.update!(user_params)
+      redirect_to profile_users_path, notice: "Updated profile with undesired ingredients"
+    end
   end
 
   def profile

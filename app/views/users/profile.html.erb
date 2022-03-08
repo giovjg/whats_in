@@ -1,3 +1,4 @@
+<div>
  <%= simple_form_for :user, url: :profile_users, method: "PATCH" do |f| %>
     <% IngredientCategory.all.each do |cat| %>
       <h2 class="category-name"> <%= cat.name.capitalize %></h2>
@@ -6,6 +7,7 @@
               label_html: { class: "d-none" },
               item_wrapper_class: 'tag-item' %>
           <%end %>
-  </div>
+</div>
   <%= f.submit "Save your ingredients", class: "btn" %>
   <% end %>
+
