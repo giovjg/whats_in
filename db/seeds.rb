@@ -86,7 +86,7 @@ ugarit = Restaurant.create!(
     address: 'Carrer de Bruniquer, 69, 08024 Barcelona',
     telephone: '645181011',
     rating: 2.5,
-    price: '££',
+    price: '€€',
     start_time: 1,
     end_time: 11,
     adaptability: true
@@ -110,7 +110,7 @@ almacen = Restaurant.create!(
     address: 'Carrer de Ramón y Cajal, 158, 08024 Barcelona',
     telephone: '645181012',
     rating: 1.5,
-    price: '£' ,
+    price: '€' ,
     wifi: true ,
     start_time: 1,
     end_time: 11,
@@ -167,7 +167,7 @@ tierra = Restaurant.create!(
     address: "Carrer D'avila, 171, 08018 Barcelona" ,
     telephone: '645181013' ,
     rating: 3.5,
-    price: '£' ,
+    price: '€' ,
     wifi: true ,
     start_time: 1,
     end_time: 12,
@@ -224,7 +224,7 @@ dolce = Restaurant.create!(
     address: 'Carrer d Hipòlit Lázaro, 34, 08025 Barcelona' ,
     telephone: '645181014' ,
     rating: 4.5,
-    price: '££',
+    price: '€€',
     wifi: true ,
     start_time: 1,
     end_time: 11
@@ -251,7 +251,7 @@ world = Restaurant.create!(
     address: 'Carrer de Bruniquer, 24, 08012 Barcelona' ,
     telephone: '645181015' ,
     rating: 5.0,
-    price: '£££',
+    price: '€€€',
     start_time: 1,
     end_time: 11
 )
@@ -306,7 +306,7 @@ koby = Restaurant.create!(
     address: 'Carrer de Marià Cubí, 92, 08021 Barcelona' ,
     telephone: '645181016' ,
     rating: 1.5,
-    price: '££' ,
+    price: '€€' ,
     start_time: 1,
     end_time: 11,
     adaptability: true
@@ -360,7 +360,7 @@ tomodachi = Restaurant.create!(
     address: ' Travessera de Gràcia, 250, 08025 Barcelona' ,
     telephone: '645181017' ,
     rating: 5.0,
-    price: '£££' ,
+    price: '€€€' ,
     start_time: 1,
     end_time: 12
 )
@@ -414,7 +414,7 @@ piadina = Restaurant.create!(
     address: 'Carrer de la Santa Creu, 1, 08024 Barcelona',
     telephone: '645181018',
     rating: 4.5,
-    price: '£££',
+    price: '€€€',
     wifi: true,
     start_time: 1,
     end_time: 12
@@ -469,7 +469,7 @@ URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill
     address: 'Travessera de Gràcia, 281, 08025 Barcelona',
     telephone: '645181019' ,
     rating: 3.5,
-    price: '£££' ,
+    price: '€€€' ,
     wifi: true,
     start_time: 1,
     end_time: 11
@@ -494,7 +494,7 @@ shannin = Restaurant.create!(
     address: "Carrer de l'Encarnació, 44, 08024 Barcelona" ,
     telephone: '645181020' ,
     rating: 3.5,
-    price: '£££' ,
+    price: '€€€' ,
     wifi: false,
     start_time: 1,
     end_time: 11
