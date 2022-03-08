@@ -1,0 +1,25 @@
+.form-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+// .search-input{
+//   width: 70%;
+// }
+
+.mapboxgl-ctrl-geocoder {
+  width: 100%;
+  min-width: 129px;
+}
+
+// .search-field {
+//   width: 10%;
+// }

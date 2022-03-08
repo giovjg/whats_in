@@ -11,3 +11,16 @@
   transform: scale(70%)translateX(45px);
 
 }
+
+.marker {
+  background-color: black;
+}
+
+.mapboxgl-marker {
+  path {
+    fill: $orange;
+  }
+}
+// .mapboxgl-marker-anchor-center path {
+//   background-color: bisque;
+// }
