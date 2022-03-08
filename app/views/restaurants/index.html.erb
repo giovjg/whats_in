@@ -1,6 +1,5 @@
-
-<details>
-<summary class="color_ingredient">Ingredients</summary>
+<details class="details">
+<summary class="color_ingredient">What can't you not eat?</summary>
     <%= simple_form_for :search, url: "/restaurants", method: "GET" do |f| %>
   <div class="ing-cat-container">
     <% IngredientCategory.all.each do |cat| %>

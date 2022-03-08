@@ -30,15 +30,16 @@
   .category-name {
   font-size: 13px;
   font-weight: bold;
+  margin-left: .5em ;
   margin-bottom: 30px;
   text-align: left;
   text-transform: uppercase;
   opacity: 0.5;
   font-weight: 200;
   letter-spacing: 0.2em;
-  padding-top: .1rem;
+  padding-top: .2rem;
   padding-left: .5em;
-  background-color: gray;
+  background-color: lightgrey;
   height: 100%;
   display: block;
 }
@@ -49,6 +50,16 @@
   margin-left: -.5em;
   margin-top: -.5em;
   margin-right: -.5em;
+  margin-bottom: 10px;
+}
+
+.color_ingredient {
+  color: $orange !important;
+  text-align: center;
+  font-weight: normal;
+  background-color: hsl(235, 24%, 9%);
+
+
 }
 
 .search_ingredients, .category-name {
@@ -59,4 +70,7 @@
 .search_ingredients{
   padding-left: 10px;
   margin-bottom: 0 !important;
+}
+.details{
+  padding: 0px !important;
 }
