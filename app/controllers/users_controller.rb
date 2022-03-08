@@ -3,7 +3,7 @@ class UsersController < ApplicationController
     if params[:user]
       current_user.allergies.destroy_all
       current_user.update!(user_params)
-      redirect_to profile_users_path, notice: "Updated profile with undesired ingredients"
+      redirect_to profile_users_path, notice: "Updated profile with undesired ingredients."
     end
   end
 
@@ -13,7 +13,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(allergies_attributes: [:ingredient_id])
+    params.require(:user).permit(ingredient_ids: [])
   end
 
   def ingredient_params

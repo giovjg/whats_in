@@ -2,15 +2,20 @@ class RestaurantsController < ApplicationController
   before_action :set_restaurant, only: [:show]
 
   def index
-    if params[:search].present?
-      @ingredients_query = ingredient_params[:ingredients]
+    if params[:user].present?
+      @ingredients_query = ingredient_params[:ingredient_ids]
       @dishes = Dish.joins(
         :dish_ingredients
-      ).where.not("dish_ingredients.ingredient_id IN (?)", ingredient_params[:ingredients])
+      ).where.not("dish_ingredients.ingredient_id IN (?)", ingredient_params[:ingredient_ids])
       @restaurants = Restaurant.joins(:dishes).where(dishes: { id: @dishes.pluck(:id) }).distinct
 
     # SELECT DISTINCT * restaurants JOINS dishes on dishes.restaurant_id = restaurants.id
     # WHERE dishes.id IN (1, 3, 4, 5)
+    elsif user_signed_in?
+      @dishes = Dish.joins(
+        :dish_ingredients
+      ).where.not("dish_ingredients.ingredient_id IN (?)", current_user.ingredients.pluck(:id))
+      @restaurants = Restaurant.joins(:dishes).where(dishes: { id: @dishes.pluck(:id) }).distinct
     else
       @restaurants = Restaurant.all
     end
@@ -29,10 +34,10 @@ class RestaurantsController < ApplicationController
   end
 
   def show
-    if params[:search].present? && params[:search][:ingredients].present?
+    if params[:user].present? && params[:user][:ingredient_ids].present?
       @dishes = @restaurant.dishes.joins(
         :dish_ingredients
-      ).where.not("dish_ingredients.ingredient_id IN (?)", ingredient_params[:ingredients])
+      ).where.not("dish_ingredients.ingredient_id IN (?)", ingredient_params[:ingredient_ids])
     else
       @dishes = @restaurant.dishes.includes(dish_ingredients: :ingredient)
     end
@@ -45,7 +50,7 @@ class RestaurantsController < ApplicationController
   end
 
   def ingredient_params
-    params.require(:search).permit(ingredients: [])
+    params.require(:user).permit(ingredient_ids: [])
   end
 
   def set_restaurant
