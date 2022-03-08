@@ -24,6 +24,7 @@
 
   .tag-selector:checked + label {
     color: white;
+    background-color: $orange;
   }
 
   .category-name {
@@ -48,7 +49,6 @@
   margin-left: -.5em;
   margin-top: -.5em;
   margin-right: -.5em;
-
 }
 
 .search_ingredients, .category-name {
