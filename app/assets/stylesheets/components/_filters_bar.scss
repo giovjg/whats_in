@@ -14,12 +14,14 @@
     font-size: 0.7rem;
     border-radius: 50rem;
     padding: 0.1rem 0.5rem;
-    background-color: #ECEAFF;
+    background-color: lightgray;
     color: #11121c;
     border: 1px solid $orange;
     margin-right: 0.6rem;
     margin-bottom: 0.4rem;
     font-weight: normal;
+    font-weight: normal;
+
   }
 
   .tag-selector:checked + label {
@@ -34,14 +36,16 @@
   margin-bottom: 30px;
   text-align: left;
   text-transform: uppercase;
-  opacity: 0.5;
+  opacity: 0.8;
   font-weight: 200;
   letter-spacing: 0.2em;
   padding-top: .2rem;
   padding-left: .5em;
   background-color: lightgrey;
   height: 100%;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .ing-cat-container {
@@ -50,7 +54,7 @@
   margin-left: -.5em;
   margin-top: -.5em;
   margin-right: -.5em;
-  margin-bottom: 10px;
+  //margin-bottom: 10px;
 }
 
 .color_ingredient {
@@ -58,12 +62,10 @@
   text-align: center;
   font-weight: normal;
   background-color: hsl(235, 24%, 9%);
-
-
 }
 
 .search_ingredients, .category-name {
-  border-bottom: 1px black solid;
+  border-bottom: 1px $orange solid;
 }
 
 
@@ -73,4 +75,8 @@
 }
 .details{
   padding: 0px !important;
+}
+
+#filter{
+  margin-bottom: 0px;
 }
