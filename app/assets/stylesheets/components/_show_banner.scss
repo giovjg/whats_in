@@ -13,6 +13,7 @@
 }
 .show-info{
   margin-top: 15px;
+  width: 100%;
 }
 .first-row{
   padding: 15px;
@@ -26,7 +27,14 @@
   justify-content: space-between;
 }
 
+.icon-wrapper{
+  justify-content: space-around;
+  display: flex;
+  padding: 10px;
+}
+
 #icon{
+
   margin: 10px;
   width: 20px;
   height: 20px;
@@ -45,8 +53,23 @@
   display: flex;
   justify-content: center;
 
-
+  p{
+    text-transform: lowercase;
+  }
   i{
     padding: 10px;
   }
+}
+#price{
+  font-weight: bold;
+}
+
+.hour{
+  display: flex;
+  justify-content: center;
+}
+
+.icon-description{
+  display: flex;
+  align-items: center
 }
