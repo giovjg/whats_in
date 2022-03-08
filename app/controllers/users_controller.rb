@@ -1,28 +1,20 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :update]
-  def update
-    if params[:save].present? && params[:save][:ingredients].present?
-      @ingredients_saved = ingredient_params[:ingredients]
-      @user = user_params[name: @user.name, ingredients_attributes: @ingredients_saved]
-      @user.update
-    end
+  def update_profile
+    current_user.allergies.destroy_all
+    current_user.update!(user_params)
+    redirect_to profile_users_path, notice: "Updated"
   end
 
-  def show
+  def profile
   end
 
   private
 
-  def set_user
-    @user = User.find(params[:id])
-  end
-
   def user_params
-    params.require(:survey).permit(:name, :ingredients_attributes[:ingredients[]])
+    params.require(:user).permit(allergies_attributes: [:ingredient_id])
   end
 
   def ingredient_params
     params.require(:save).permit(ingredients: [])
   end
-
 end

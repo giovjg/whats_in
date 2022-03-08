@@ -1,8 +1,8 @@
- <%= simple_form_for :save, url: `/users/#{current_user.id}`, method: "PATCH" do |f| %>
+ <%= simple_form_for :user, url: :profile_users, method: "PATCH" do |f| %>
     <% IngredientCategory.all.each do |cat| %>
       <h2 class="category-name"> <%= cat.name.capitalize %></h2>
     <%= f.input :ingredients, legend_tag: false, collection: cat.ingredients, as: :check_boxes,
-              include_hidden:false, include_blank: false, input_html: { class: "tag-selector" },
+              include_hidden:false, include_blank: false, input_html: { class: "tag-selector", name: "user[allergies_attributes[][ingredient_id]]" },
               label_html: { class: "d-none" },
               item_wrapper_class: 'tag-item' %>
           <%end %>
