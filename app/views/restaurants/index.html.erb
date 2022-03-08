@@ -1,13 +1,13 @@
 <details class="details">
 <summary class="color_ingredient">What can't you eat?</summary>
-    <%= simple_form_for :search, url: "/restaurants", method: "GET" do |f| %>
+    <%= simple_form_for current_user || User.new, url: "/restaurants", method: "GET" do |f| %>
   <div class="ing-cat-container">
     <% IngredientCategory.all.each do |cat| %>
       <h2 class="category-name"> <%= cat.name.capitalize %></h2>
-    <%= f.input :ingredients, legend_tag: false, collection: cat.ingredients, as: :check_boxes,
+    <%= f.input :ingredient_ids, legend_tag: false, collection: cat.ingredients, as: :check_boxes,
               include_hidden:false, include_blank: false, input_html: { class: "tag-selector" },
               label_html: { class: "d-none" },
-              item_wrapper_class: 'tag-item' %>
+              item_wrapper_class: 'tag-item', checked: @ingredients_query %>
           <% end %>
   </div>
   <%= f.submit "Filter", class: "btn"%>
