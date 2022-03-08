@@ -216,19 +216,6 @@ tacoChorizo = Dish.create!(name:'Taco chorizo' ,restaurant_id: tierra.id)
 tacoChorizo.photo.attach(io: file, filename: 'tacoChorizo.jpg', content_type: 'image/jpg')
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 file =
 URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/v1646319972/Dolce-Pizza-comedor_restaurant_ertlrw.jpg')
 dolce = Restaurant.create!(
@@ -270,17 +257,49 @@ world = Restaurant.create!(
 )
 world.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646723622/dishes/indian/istockphoto-1311491582-170667a_aghsxm.jpg')
 dhal = Dish.create!(name:'Dhal' ,restaurant_id: world.id)
-tikkaMasala = Dish.create!(name:'Tikka Masala' ,restaurant_id: world.id)
-pakoras = Dish.create!(name:'Pakoras' ,restaurant_id: world.id)
-korma = Dish.create!(name:'Korma' ,restaurant_id: world.id)
-alooGobi = Dish.create!(name:'Aloo Gobi' ,restaurant_id: world.id)
-chanaMasala = Dish.create!(name:'Chana Masala' ,restaurant_id: world.id)
-palak = Dish.create!(name:'Palak' ,restaurant_id: world.id)
-butterChicken = Dish.create!(name:'Butter Chicken' ,restaurant_id: world.id)
+dhal.photo.attach(io: file, filename: 'dhal.jpg', content_type: 'image/jpg')
+
 
 file =
-URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/v1646319972/kobe_restaurant_dpjpgs.jpg')
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646723680/dishes/indian/istockphoto-477879982-612x612_mcxfyh.jpg')
+tikkaMasala = Dish.create!(name:'Tikka Masala' ,restaurant_id: world.id)
+tikkaMasala.photo.attach(io: file, filename: 'tikkaMasala.jpg', content_type: 'image/jpg')
+
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646723626/dishes/indian/istockphoto-177043240-170667a_c3es35.jpg')
+pakoras = Dish.create!(name:'Pakoras' ,restaurant_id: world.id)
+pakoras.photo.attach(io: file, filename: 'pakoras.jpg', content_type: 'image/jpg')
+
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646723659/dishes/indian/photo-1606471191009-63994c53433b_ww4ara.avif')
+korma = Dish.create!(name:'Korma' ,restaurant_id: world.id)
+korma.photo.attach(io: file, filename: 'korma.jpg', content_type: 'image/jpg')
+
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646723633/dishes/indian/istockphoto-1290444763-170667a_rgxobf.jpg')
+alooGobi = Dish.create!(name:'Aloo Gobi' ,restaurant_id: world.id)
+alooGobi.photo.attach(io: file, filename: 'alooGobi.jpg', content_type: 'image/jpg')
+
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646723641/dishes/indian/photo-1517244683847-7456b63c5969_hivygh.avif')
+chanaMasala = Dish.create!(name:'Chana Masala' ,restaurant_id: world.id)
+chanaMasala.photo.attach(io: file, filename: 'chanaMasala.jpg', content_type: 'image/jpg')
+
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646723652/dishes/indian/photo-1596797038530-2c107229654b_yuroq3.avif')
+palak = Dish.create!(name:'Palak' ,restaurant_id: world.id)
+palak.photo.attach(io: file, filename: 'palak.jpg', content_type: 'image/jpg')
+
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646723647/dishes/indian/photo-1505253758473-96b7015fcd40_pwxaqc.avif')
+butterChicken = Dish.create!(name:'Butter Chicken' ,restaurant_id: world.id)
+butterChicken.photo.attach(io: file, filename: 'butterChicken.jpg', content_type: 'image/jpg')
+
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/v1646724558/dishes/photo-1593462386344-bc7ffba51a1e_mpjzta.avif')
 koby = Restaurant.create!(
     name: 'Koby Burgers' ,
     category: 'Burger' ,
@@ -347,14 +366,45 @@ tomodachi = Restaurant.create!(
 )
 tomodachi.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646722918/dishes/sushi/istockphoto-1298575561-170667a_bj6jdm.jpg')
 nigriri = Dish.create!(name:'Nigriri' ,restaurant_id: tomodachi.id)
+nigriri.photo.attach(io: file, filename: 'nigriri.jpg', content_type: 'image/jpg')
+
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646722914/dishes/sushi/istockphoto-1286622470-170667a_jelcln.jpg')
 maki = Dish.create!(name:'Maki' ,restaurant_id: tomodachi.id)
+maki.photo.attach(io: file, filename: 'maki.jpg', content_type: 'image/jpg')
+
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646722910/dishes/sushi/istockphoto-183341110-170667a_aprw4h.jpg')
 uramaki = Dish.create!(name:'Uramaki' ,restaurant_id: tomodachi.id)
+uramaki.photo.attach(io: file, filename: 'uramaki.jpg', content_type: 'image/jpg')
+
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646722970/dishes/sushi/photo-1617196035154-1e7e6e28b0db_b9az7s.avif')
 temaki = Dish.create!(name:'Temaki' ,restaurant_id: tomodachi.id)
+temaki.photo.attach(io: file, filename: 'temaki.jpg', content_type: 'image/jpg')
+
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646722955/dishes/sushi/photo-1582450871972-ab5ca641643d_mrsdbj.avif')
 gunkan = Dish.create!(name:'Gunkan' ,restaurant_id: tomodachi.id)
+gunkan.photo.attach(io: file, filename: 'gunkan.jpg', content_type: 'image/jpg')
+
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646722948/dishes/sushi/photo-1580822184713-fc5400e7fe10_zz3af8.avif')
 futomaki = Dish.create!(name:'Futomaki' ,restaurant_id: tomodachi.id)
+futomaki.photo.attach(io: file, filename: 'futomaki.jpg', content_type: 'image/jpg')
+
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646722939/dishes/sushi/photo-1579584425555-c3ce17fd4351_rwip7h.avif')
 sashimi = Dish.create!(name:'Sashimi' ,restaurant_id: tomodachi.id)
+sashimi.photo.attach(io: file, filename: 'sashimi.jpg', content_type: 'image/jpg')
+
+file =
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646722924/dishes/sushi/istockphoto-1320922361-170667a_klkvdu.jpg')
 inari = Dish.create!(name:'Inari' ,restaurant_id: tomodachi.id)
+inari.photo.attach(io: file, filename: 'inari.jpg', content_type: 'image/jpg')
 
 file =
 URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/v1646319972/piadina_restaurant_yup6sa.jpg')
@@ -374,42 +424,42 @@ piadina = Restaurant.create!(
 file =
 URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646672729/dishes/pasta/photo-1595295333158-4742f28fbd85_ftjnju.avif')
  vongole = Dish.create!(name:'Vongole' ,restaurant_id: piadina.id)
-
+ vongole.photo.attach(io: file, filename: 'vongole.jpg', content_type: 'image/jpg')
 
  file =
 URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646672697/dishes/pasta/istockphoto-1309699313-170667a_yjyu30.jpg')
  spagettiAlPesto = Dish.create!(name:'Spagetti al pesto' ,restaurant_id: piadina.id)
-
+ spagettiAlPesto.photo.attach(io: file, filename: 'spagettiAlPesto.jpg', content_type: 'image/jpg')
 
  file =
  URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646673017/dishes/pasta/photo-1608219992759-8d74ed8d76eb_lupnpa.avif')
  carbonara = Dish.create!(name:'Carbonara' ,restaurant_id: piadina.id)
-
+ carbonara.photo.attach(io: file, filename: 'carbonara.jpg', content_type: 'image/jpg')
 
  file =
 URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646672687/dishes/pasta/photo-1608897013039-887f21d8c804_guojb3.avif')
  pastaNorma = Dish.create!(name:'Pasta Norma' ,restaurant_id: piadina.id)
-
+ pastaNorma.photo.attach(io: file, filename: 'pastaNorma.jpg', content_type: 'image/jpg')
 
  file =
 URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646672783/dishes/pasta/photo-1600803907087-f56d462fd26b_x5ydrt.avif')
  aglio = Dish.create!(name:'Aglio' ,restaurant_id: piadina.id)
-
+ aglio.photo.attach(io: file, filename: 'aglio.jpg', content_type: 'image/jpg')
 
  file =
 URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646672722/dishes/pasta/photo-1563379926898-05f4575a45d8_xr5v8m.avif')
  parmigiana = Dish.create!(name:'Parmigiana' ,restaurant_id: piadina.id)
-
+ parmigiana.photo.attach(io: file, filename: 'parmigiana.jpg', content_type: 'image/jpg')
 
  file =
 URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646672711/dishes/pasta/photo-1579684947550-22e945225d9a_xnyndi.avif')
  provolone = Dish.create!(name:'Provolone' ,restaurant_id: piadina.id)
-
+ provolone.photo.attach(io: file, filename: 'provolone.jpg', content_type: 'image/jpg')
 
  file =
 URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1646672717/dishes/pasta/photo-1551183053-bf91a1d81141_rqbdfa.avif')
  pastaAlaTonna = Dish.create!(name:'Pasta ala tonna' ,restaurant_id: piadina.id)
-
+ pastaAlaTonna.photo.attach(io: file, filename: 'pastaAlaTonna.jpg', content_type: 'image/jpg')
 
  file =
  URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/v1646320000/yoma_restaurant_kgnw62.jpg')
@@ -436,7 +486,7 @@ URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_1:1,c_fill
  maPoTofu = Dish.create!(name:'Ma Po Tofu' ,restaurant_id: yoma.id)
 
 file =
-URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/v1646320921/sannin_restaurant_zyi6ws.jpg')
+URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1646724231/dishes/photo-1517248135467-4c7edcad34c4_n1eaqn.avif')
 shannin = Restaurant.create!(
     name: 'Sannin' ,
 
