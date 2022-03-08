@@ -1,12 +1,11 @@
 // Specific CSS for your home-page
 
-.main-container{
+.main-container {
     height: 100vh;
     background-image: url("cover.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    display: flex;
     justify-content: center;
 
     form{
@@ -17,5 +16,5 @@
 .fun{
     color: $orange;
     justify-items: center;
-    margin-top: 55px;
+    padding-top: 55px;
 }
