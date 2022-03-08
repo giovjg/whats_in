@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :ingredients, through: :allergies
   has_one_attached :photo
+  accepts_nested_attributes_for :ingredients
 end
