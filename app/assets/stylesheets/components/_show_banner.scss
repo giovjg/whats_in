@@ -25,6 +25,8 @@
   display: flex;
   //justify-content: center;
   justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .icon-wrapper{
