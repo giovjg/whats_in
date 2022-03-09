@@ -2,6 +2,10 @@
 <h3 class="color_ingredient">What can't you eat?</h3>
  <%= simple_form_for current_user, url: :profile_users, method: "PATCH" do |f| %>
   <div class="ing-cat-container">
+    <div class="profile-container">
+      <%= cl_image_tag current_user.photo.key, height: 300, width: 400, crop: :fill %>
+
+    </div>
     <% IngredientCategory.all.each do |cat| %>
       <h2 class="category-name"> <%= cat.name.capitalize %></h2>
     <%= f.input :ingredient_ids, legend_tag: false, collection: cat.ingredients, as: :check_boxes,
