@@ -1,5 +1,9 @@
 <div class="details">
 <h3 class="color_ingredient">What can't you eat?</h3>
+  <div class="profile-container">
+    <div class="profile-details">
+      <%= cl_image_tag current_user.photo.key, crop: :fill %>
+    </div>
  <%= simple_form_for current_user, url: :profile_users, method: "PATCH" do |f| %>
   <div class="ing-cat-container">
     <% IngredientCategory.all.each do |cat| %>
@@ -12,4 +16,5 @@
   </div>
     <%= f.submit "Save your ingredients", class: "btn" %>
     <% end %>
+  </div>
 </div>

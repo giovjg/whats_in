@@ -1,0 +1,17 @@
+.profile-container {
+  display: block;
+}
+
+.profile-details {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  margin-bottom: 15px;
+
+  // img {
+  //   width: 27%;
+  // }
+}
+
+.ing-cat-container .profile {
+  margin-top: 10px;
+}
