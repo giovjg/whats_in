@@ -11,7 +11,7 @@ class RestaurantsController < ApplicationController
 
     # SELECT DISTINCT * restaurants JOINS dishes on dishes.restaurant_id = restaurants.id
     # WHERE dishes.id IN (1, 3, 4, 5)
-    elsif user_signed_in?
+    elsif user_signed_in? && !current_user.ingredients.empty?
       @ingredients_query = current_user.ingredients.pluck(:id)
       @dishes = Dish.joins(
         :dish_ingredients
