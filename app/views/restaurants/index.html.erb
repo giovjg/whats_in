@@ -24,7 +24,10 @@
 <% if @restaurants %>
   <% @restaurants.each do |restaurant| %>
       <div class="card-trip">
+      <div>
         <%= cl_image_tag restaurant.photo.key, height: 300, width: 400, crop: :fill %>
+        <div class="heart"><i class="far fa-heart border-heart"></i></div>
+      </div>
         <div class="card-trip-infos">
           <div>
             <h2><%= link_to restaurant.name, restaurant_path(restaurant, user: {ingredient_ids: @ingredients_query}), class:"rest-name-card" %></h2>

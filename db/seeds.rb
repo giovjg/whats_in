@@ -29,7 +29,6 @@ user_lidia = User.create!(email: "lidia@lidia.com", password: "lidia1")
 lidia_photo = URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/v1646821531/Lidia_aczuzh.jpg')
 user_lidia.photo.attach(io: lidia_photo, filename: "lidia.jpg", content_type: 'image/jpeg')
 
-
 fruits = IngredientCategory.create!(name: 'Fruits')
 gluten = IngredientCategory.create!(name: 'gluten')
 eggs = IngredientCategory.create!(name: 'eggs')
