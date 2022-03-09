@@ -14,13 +14,13 @@
     font-size: 0.7rem;
     border-radius: 50rem;
     padding: 0.1rem 0.5rem;
-    background-color: lightgray;
+    background-color: transparent;
     color: #11121c;
     border: 1px solid $orange;
     margin-right: 0.6rem;
     margin-bottom: 0.4rem;
     font-weight: normal;
-    font-weight: normal;
+    margin-left: 0.5rem;
 
   }
 
@@ -80,3 +80,15 @@
 #filter{
   margin-bottom: 0px;
 }
+.was-validated .form-check-input:valid ~ .form-check-label, .form-check-input.is-valid ~ .form-check-label {
+  color: black;
+}
+//.form-check-label{
+ // color: #11121c !important;
+  //background-color: lightgray;
+//}
+
+//.form-check-label:checked + label {
+ // color: white;
+ // background-color: $orange;
+//}
