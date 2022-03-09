@@ -12,9 +12,10 @@ class RestaurantsController < ApplicationController
     # SELECT DISTINCT * restaurants JOINS dishes on dishes.restaurant_id = restaurants.id
     # WHERE dishes.id IN (1, 3, 4, 5)
     elsif user_signed_in?
+      @ingredients_query = current_user.ingredients.pluck(:id)
       @dishes = Dish.joins(
         :dish_ingredients
-      ).where.not("dish_ingredients.ingredient_id IN (?)", current_user.ingredients.pluck(:id))
+      ).where.not("dish_ingredients.ingredient_id IN (?)", @ingredients_query)
       @restaurants = Restaurant.joins(:dishes).where(dishes: { id: @dishes.pluck(:id) }).distinct
     else
       @restaurants = Restaurant.all
