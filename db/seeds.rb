@@ -165,7 +165,7 @@ tierra = Restaurant.create!(
     name: 'Tierra' ,
     category: 'Mexican' ,
     address: "Carrer D'avila, 171, 08018 Barcelona" ,
-    telephone: '+34645181001' ,
+    telephone: '+34608522329' ,
     rating: 3.5,
     price: '€' ,
     wifi: true ,
