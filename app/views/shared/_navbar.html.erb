@@ -1,5 +1,13 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon <%="home-navbar" if current_page?(root_path)%>">
   <div class="container-fluid">
+  <% if @restaurant && current_page?(restaurant_path(@restaurant)) %>
+    <%= link_to  restaurants_path do %>
+      <i class="fas fa-chevron-circle-left back"></i>
+    <% end %>
+    <% else%>
+    <div></div>
+  <%end%>
+  
 
     <%= link_to "WhatsIn?", root_path, class: "logo" %>
 
