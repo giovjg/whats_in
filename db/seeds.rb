@@ -29,6 +29,7 @@ user_lidia = User.create!(email: "lidia@lidia.com", password: "lidia1")
 lidia_photo = URI.open('https://res.cloudinary.com/ddamh5wea/image/upload/v1646821531/Lidia_aczuzh.jpg')
 user_lidia.photo.attach(io: lidia_photo, filename: "lidia.jpg", content_type: 'image/jpeg')
 
+
 fruits = IngredientCategory.create!(name: 'Fruits')
 gluten = IngredientCategory.create!(name: 'gluten')
 eggs = IngredientCategory.create!(name: 'eggs')
@@ -169,7 +170,7 @@ tierra = Restaurant.create!(
     name: 'Tierra' ,
     category: 'Mexican' ,
     address: "Carrer D'avila, 171, 08018 Barcelona" ,
-    telephone: '+34645181001' ,
+    telephone: '+34608522329' ,
     rating: 3.5,
     price: '€' ,
     wifi: true ,
