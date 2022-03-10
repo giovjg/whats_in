@@ -1,13 +1,15 @@
 .border-heart{
     color: red;
-    font-size: 21px;
+    font-size: 25px;
+    text-shadow: 1px 0 2px black;
   }
 .selected-heart{
 color: red;
 font-size: 23px;
 }
 
-// .heart{
-//     position: relative;
-//     top: 20px; right: 27px;
-// }
+.heart{
+    position: relative;
+    bottom: 280px;
+    left: 350px;
+}
