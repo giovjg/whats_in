@@ -21,7 +21,7 @@
           <li class="nav-item active">
             <%= link_to "Home", root_path, class: "nav-link" %>
           </li>
-              <%= link_to "Profile", profile_users_path(current_user), class: "nav-link" %>
+              <%= link_to "Preferences", profile_users_path(current_user), class: "nav-link" %>
               <%= link_to "Log out", destroy_user_session_path, method: :delete %>
         <% else %>
           <li class="nav-item">
