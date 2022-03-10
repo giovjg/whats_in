@@ -1,6 +1,17 @@
 .profile-container {
   display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  background-color: #11121c;
+
+  p {
+    color: #FF9234;
+    margin: 10px auto;
+  }
+
 }
+
 
 .profile-details {
   display: grid;
