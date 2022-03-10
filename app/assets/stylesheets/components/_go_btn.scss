@@ -1,16 +1,20 @@
 
 
-.go {
+#go {
     background-color: $orange;
-    padding: 3px 30px;
+    padding: 4px 20px;
     border-radius: 5px;
-    font-weight: bold;
-    margin-left: 5px;
+    font-weight: normal;
+    margin: 5px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    width: 90%;
+    border-color: $orange;
+    margin-bottom: 1px;
 
-    .go:hover {
+    #go:hover {
         padding: 12px;
-        font-weight: bolder;
+        font-weight: bold;
     }
-
-
 }

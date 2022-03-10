@@ -1,15 +1,18 @@
 
-// .form-container {
-//   width: 100%;
-//   margin: 0 auto;
-// }
+.form-container form{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+ }
 
 .search-container {
   display: flex;
-  justify-content: center;
-  width: 80%;
+  align-items: center;
+  width: 100%;
   // margin: 0 auto;
-  padding: 0 20px;
+  padding: 3 30px;
+  margin: 5px;
+  font-size: normal;
 }
 
 .mapboxgl-ctrl-geocoder {
@@ -18,7 +21,10 @@
 }
 
 .mapboxgl-ctrl-geocoder--input {
-  height: 37px;
+  height: 33px;
+  font: -webkit-control;
+  background-color: rgba(211, 211, 211, 0.397);
+  border-radius: 5px;
 
 }
 
