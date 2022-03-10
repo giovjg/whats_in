@@ -14,10 +14,16 @@ class FavouritesController < ApplicationController
     @favourite = Favourite.new
     @favourite.restaurant = @restaurant
     @favourite.user = current_user
-    @favourite.save!
+    @favourite.save
     respond_to do |f|
       f.html { redirect_to restaurant_path(@restaurant) }
-      f.text { render partial: "favourites/link_destroy_favourite.html.erb", locals: { restaurant: @restaurant, favourite: @favourite } }
+      f.text {
+              render partial: "favourites/link_destroy_favourite.html.erb",
+              locals: {
+                restaurant: @restaurant,
+                favourite: @favourite
+             }
+            }
     end
   end
 
@@ -26,7 +32,7 @@ class FavouritesController < ApplicationController
     @favourite.destroy
     respond_to do |f|
       f.html { redirect_to restaurant_path(@restaurant) }
-      f.text { render partial: "favourites/link_favourite.html.erb", locals: { restaurant: @restaurant, favourite: @favourite } }
+      f.text { render partial: "favourites/link_favourite.html.erb", locals: { restaurant: @restaurant, favourite: @favourite }}
     end
   end
 

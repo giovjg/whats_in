@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_many :allergies
   has_many :ingredients, through: :allergies
   has_many :favourites
+  has_many :restaurants, through: :favourites
   has_one_attached :photo
   accepts_nested_attributes_for :allergies, allow_destroy: true
 end
