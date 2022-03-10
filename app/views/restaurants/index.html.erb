@@ -26,7 +26,9 @@
       <div class="card-trip">
       <div>
         <%= cl_image_tag restaurant.photo.key, height: 300, width: 400, crop: :fill %>
+        <% if user_signed_in? %>
         <%= render 'favourites/link_favourite', restaurant: restaurant %>
+        <% end %>
       </div>
         <div class="card-trip-infos">
           <div>
