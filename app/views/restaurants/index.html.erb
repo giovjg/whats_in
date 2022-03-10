@@ -24,10 +24,14 @@
 <% if @restaurants %>
   <% @restaurants.each do |restaurant| %>
       <div class="card-trip">
-        <div>
-          <%= cl_image_tag restaurant.photo.key, height: 300, width: 400, crop: :fill %>
+        <div id="card-photo"style="background-image: url('<%= cl_image_path restaurant.photo.key %>')">
           <% if user_signed_in? %>
-          <%= render 'favourites/link_favourite', restaurant: restaurant %>
+            <% favourite = @user_favourites.find { |favourite| favourite.restaurant_id == restaurant.id } %>
+            <% if favourite %>
+            <%= render 'favourites/link_destroy_favourite', restaurant: restaurant, favourite: favourite %>
+            <% else %>
+            <%= render 'favourites/link_favourite', restaurant: restaurant %>
+            <% end %>
           <% end %>
         </div>
         <div class="card-trip-infos">

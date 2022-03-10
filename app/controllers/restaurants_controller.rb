@@ -2,6 +2,7 @@ class RestaurantsController < ApplicationController
   before_action :set_restaurant, only: [:show]
 
   def index
+    @user_favourites = current_user&.favourites.to_a
     if params[:user].present?
       @ingredients_query = ingredient_params[:ingredient_ids]
       @dishes = Dish.joins(
@@ -29,7 +30,6 @@ class RestaurantsController < ApplicationController
         lat: restaurant.latitude,
         lng: restaurant.longitude,
         info_window: render_to_string(partial: "info_window", locals: { restaurant: restaurant }),
-        #image_url: helpers.asset_url("cloudinary://817351874799989:jsbX6mdPIu7YdvgoX__wUdJ0Htw@ddamh5wea")
       }
     end
   end
