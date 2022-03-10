@@ -3,7 +3,7 @@ class UsersController < ApplicationController
     if params[:user]
       current_user.allergies.destroy_all
       current_user.update!(user_params)
-      redirect_to profile_users_path, notice: "Updated profile with undesired ingredients."
+      redirect_to restaurants_path, notice: "Updated profile with undesired ingredients."
     end
   end
 
