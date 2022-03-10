@@ -3,6 +3,7 @@ class Restaurant < ApplicationRecord
   validates :address, presence: true
   has_many :dishes
   has_many :ingredients
+  has_many :favourites
   has_one_attached :photo
 
   geocoded_by :address

@@ -1,0 +1,3 @@
+<%= link_to restaurant_favourite_path(restaurant, favourite), data: { controller: "favourite", action: "click->favourite#deleteFavouriteRestaurant" } do %>
+  <div class="heart"  data-favourites-target="favourite"><i class="fas fa-heart selected-heart"></i></div>
+<% end %>
