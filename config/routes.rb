@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :restaurants, only: [ :index, :show ] do
-    resources :favourites, only: [:create]
+    resources :favourites, only: [:create, :destroy]
     resources :reviews, only: [ :index, :create ]
   end
 end

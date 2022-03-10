@@ -26,7 +26,7 @@
       <div class="card-trip">
       <div>
         <%= cl_image_tag restaurant.photo.key, height: 300, width: 400, crop: :fill %>
-        <div class="heart"><i class="far fa-heart border-heart"></i></div>
+        <%= render 'favourites/link_favourite', restaurant: restaurant %>
       </div>
         <div class="card-trip-infos">
           <div>
