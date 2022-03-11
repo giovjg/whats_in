@@ -3,7 +3,7 @@ class RestaurantsController < ApplicationController
 
   def index
     @user_favourites = current_user&.favourites.to_a
-    if params[:user].present?
+    if params[:user].present? && ingredient_params[:ingredient_ids].present?
       @ingredients_query = ingredient_params[:ingredient_ids]
       @dishes = Dish.joins(
         :dish_ingredients

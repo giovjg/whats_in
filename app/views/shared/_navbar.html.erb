@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon <%="home-navbar" if current_page?(root_path)%>">
   <div class="container-fluid">
   <% if @restaurant && current_page?(restaurant_path(@restaurant)) %>
-    <%= link_to  restaurants_path(@restaurant, user: {ingredient_ids: @ingredients_query}) do %>
+    <%= link_to  restaurants_path(@restaurant, user: {ingredient_ids: @ingredients_query}, address: params[:address]) do %>
       <i class="fas fa-chevron-circle-left back"></i>
     <% end %>
     <% else%>
