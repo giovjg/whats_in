@@ -36,7 +36,7 @@
         </div>
         <div class="card-trip-infos">
           <div>
-            <h2><%= link_to restaurant.name, restaurant_path(restaurant, user: {ingredient_ids: @ingredients_query}), class:"rest-name-card" %></h2>
+            <h2><%= link_to restaurant.name, restaurant_path(restaurant, user: {ingredient_ids: @ingredients_query}, address: params[:address]), class:"rest-name-card" %></h2>
             <p><%= restaurant.category %></p>
           </div>
           <strong class="card-trip-pricing"><i class="fas fa-star star"></i><%= restaurant.rating %></strong>

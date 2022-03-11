@@ -3,7 +3,7 @@ class RestaurantsController < ApplicationController
 
   def index
     @user_favourites = current_user&.favourites.to_a
-    if params[:user].present?
+    if params[:user].present? && ingredient_params[:ingredient_ids].present?
       @ingredients_query = ingredient_params[:ingredient_ids]
       @dishes = Dish.joins(
         :dish_ingredients
@@ -36,6 +36,7 @@ class RestaurantsController < ApplicationController
 
   def show
     if params[:user].present? && params[:user][:ingredient_ids].present?
+      @ingredients_query = ingredient_params[:ingredient_ids]
       @dishes = @restaurant.dishes.joins(
         :dish_ingredients
       ).where.not("dish_ingredients.ingredient_id IN (?)", ingredient_params[:ingredient_ids])
@@ -47,7 +48,10 @@ class RestaurantsController < ApplicationController
   private
 
   def restaurant_params
-    params.require(:restaurant).permit(:name, :address, :photo, :category, :rating, :price, :wifi, :adaptability, :start_time, :end_time)
+    params.require(:restaurant).permit(
+      :name, :address, :photo, :category, :rating, :price, :wifi,
+      :adaptability, :start_time, :end_time
+    )
   end
 
   def ingredient_params

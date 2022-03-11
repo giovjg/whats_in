@@ -18,12 +18,12 @@ class FavouritesController < ApplicationController
     respond_to do |f|
       f.html { redirect_to restaurant_path(@restaurant) }
       f.text {
-              render partial: "favourites/link_destroy_favourite.html.erb",
-              locals: {
-                restaurant: @restaurant,
-                favourite: @favourite
-             }
-            }
+        render partial: "favourites/link_destroy_favourite.html.erb",
+               locals: {
+                 restaurant: @restaurant,
+                 favourite: @favourite
+       }
+      }
     end
   end
 
