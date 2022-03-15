@@ -1,18 +1,23 @@
 
-.form-container form{
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+// .form-container form{
+//   display: grid;
+//   grid-template-columns: 2fr 1fr;
 
- }
+//  }
 
 .search-container {
+  position: absolute;
+  height: 26px;
+  left: 21px;
+  top: 244px;
+
   display: flex;
   align-items: center;
-  width: 100%;
-  // margin: 0 auto;
-  padding: 3 30px;
+  width: 70%;
+  padding: 3px 30px;
   margin: 5px;
-  font-size: normal;
+  // font-size: normal;
+
 }
 
 .mapboxgl-ctrl-geocoder {
