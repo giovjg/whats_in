@@ -1,9 +1,9 @@
 
-// .form-container form{
-//   display: grid;
-//   grid-template-columns: 2fr 1fr;
+.form-container form {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
 
-//  }
+ }
 
 .search-container {
   position: absolute;
@@ -18,11 +18,17 @@
   margin: 5px;
   // font-size: normal;
 
+  .target-container {
+    width: 123%;
+  }
+
 }
 
 .mapboxgl-ctrl-geocoder {
-  width: 100%;
-  min-width: 129px;
+  position: relative;
+  right: 40px;
+  // width: 100%;
+  min-width: 200px;
 }
 
 .mapboxgl-ctrl-geocoder--input {
