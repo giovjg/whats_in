@@ -24,7 +24,7 @@
 
 <% if @restaurants %>
   <% @restaurants.each do |restaurant| %>
-      <div class="card-trip">
+      <div class="index-cards">
         <div id="card-photo"style="background-image: url('<%= cl_image_path restaurant.photo.key %>')">
           <% if user_signed_in? %>
             <% favourite = @user_favourites.find { |favourite| favourite.restaurant_id == restaurant.id } %>
@@ -36,7 +36,7 @@
           <% end %>
         </div>
         <div class="card-trip-infos">
-          <div>
+          <div class="card-text">
             <h2><%= link_to restaurant.name, restaurant_path(restaurant, user: {ingredient_ids: @ingredients_query}, address: params[:address]), class:"rest-name-card" %></h2>
             <p><%= restaurant.category %></p>
           </div>
