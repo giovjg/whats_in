@@ -1,20 +1,17 @@
 
 
 #go {
-    background-color: $orange;
-    padding: 4px 20px;
-    border-radius: 5px;
-    font-weight: normal;
-    margin: 5px;
-    margin-right: 10px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    width: 90%;
-    border-color: $orange;
-    margin-bottom: 1px;
+  font-family: 'Ubuntu Condensed';
+  font-size: 19px;
+  background-color: #264653;
+  color: white;
+  width: 90%;
+  padding: 3px 20px;
+  margin: 5px;
+  border-radius: 5px;
 
-    #go:hover {
-        padding: 12px;
-        font-weight: bold;
-    }
+  #go:hover {
+    padding: 12px;
+    font-weight: bold;
+  }
 }
