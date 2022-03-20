@@ -1,5 +1,3 @@
-<%= render 'shared/navbar' %>
-
 <details class="details">
 <summary class="color_ingredient">What can't you eat?</summary>
     <%= simple_form_for current_user || User.new, url: "/restaurants", method: "GET" do |f| %>
@@ -16,6 +14,7 @@
   <% end %>
 </details>
 
+
 <div style="width: 100%; height: 250px;"
   data-controller="mapbox"
   data-mapbox-markers-value="<%= @markers.to_json %>"
@@ -24,7 +23,7 @@
 
 <% if @restaurants %>
   <% @restaurants.each do |restaurant| %>
-      <div class="index-cards">
+      <div class="card-trip">
         <div id="card-photo"style="background-image: url('<%= cl_image_path restaurant.photo.key %>')">
           <% if user_signed_in? %>
             <% favourite = @user_favourites.find { |favourite| favourite.restaurant_id == restaurant.id } %>
@@ -36,13 +35,12 @@
           <% end %>
         </div>
         <div class="card-trip-infos">
-          <div class="card-header">
+          <div>
             <h2><%= link_to restaurant.name, restaurant_path(restaurant, user: {ingredient_ids: @ingredients_query}, address: params[:address]), class:"rest-name-card" %></h2>
-            <strong class="card-trip-pricing"><i class="fas fa-star star"></i><%= restaurant.rating %></strong>
+            <p><%= restaurant.category %></p>
           </div>
-            <h3><%= restaurant.category %></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum iusto impedit exercitationem voluptas</p>
+          <strong class="card-trip-pricing"><i class="fas fa-star star"></i><%= restaurant.rating %></strong>
         </div>
-          </div>
+      </div>
     <% end %>
 <% end %>
